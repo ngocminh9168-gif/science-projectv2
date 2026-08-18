@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ions and Ionic Compounds - GCSE Science</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #0f172a 0%, #1a1f3a 100%);
+        color: #e2e8f0;
+        min-height: 100vh;
+      }
+
+      header {
+        background: rgba(15, 23, 42, 0.95);
+        border-bottom: 1px solid rgba(51, 216, 255, 0.2);
+        padding: 1rem 2rem;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+
+      .header-content {
+        max-width: 1400px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: #33d8ff;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .logo:hover {
+        color: #4ae8ff;
+      }
+
+      .back-btn {
+        padding: 0.6rem 1.5rem;
+        background: linear-gradient(135deg, #33d8ff 0%, #00b4d8 100%);
+        color: #0f172a;
+        font-weight: 600;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
+
+      .back-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(51, 216, 255, 0.4);
+      }
+
+      .content {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 3rem 2rem;
+      }
+
+      .page-title {
+        font-size: 2.5rem;
+        background: linear-gradient(135deg, #33d8ff 0%, #7c3aed 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin-bottom: 1rem;
+      }
+
+      .subtitle {
+        font-size: 1.2rem;
+        color: #cbd5e1;
+        margin-bottom: 2rem;
+      }
+
+      .section {
+        background: linear-gradient(
+          135deg,
+          rgba(30, 41, 59, 0.8) 0%,
+          rgba(51, 65, 85, 0.6) 100%
+        );
+        border: 1px solid rgba(51, 216, 255, 0.2);
+        border-radius: 12px;
+        padding: 2rem;
+        margin-bottom: 2rem;
+      }
+
+      .section h2 {
+        color: #33d8ff;
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+        border-bottom: 2px solid rgba(51, 216, 255, 0.3);
+        padding-bottom: 0.5rem;
+      }
+
+      .section h3 {
+        color: #7c3aed;
+        font-size: 1.3rem;
+        margin-top: 1.5rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .section p {
+        color: #cbd5e1;
+        line-height: 1.8;
+        margin-bottom: 1rem;
+      }
+
+      .section ul {
+        color: #cbd5e1;
+        margin-left: 2rem;
+        line-height: 1.8;
+      }
+
+      .section li {
+        margin-bottom: 0.5rem;
+      }
+
+      .code-box {
+        background: rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(51, 216, 255, 0.3);
+        border-radius: 6px;
+        padding: 1rem;
+        margin: 1rem 0;
+        font-family: "Courier New", monospace;
+        color: #4ae8ff;
+        overflow-x: auto;
+      }
+
+      footer {
+        background: rgba(15, 23, 42, 0.95);
+        border-top: 1px solid rgba(51, 216, 255, 0.2);
+        padding: 2rem;
+        text-align: center;
+        color: #64748b;
+      }
+
+      @media (max-width: 768px) {
+        .page-title {
+          font-size: 1.8rem;
+        }
+
+        .content {
+          padding: 2rem 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="header-content">
+        <a href="atom-science.html" class="logo">⚛️ AtomHub</a>
+        <a href="atom-science.html" class="back-btn">← Back to Home</a>
+      </div>
+    </header>
+
+    <div class="content">
+      <h1 class="page-title">Ions and Ionic Compounds</h1>
+      <p class="subtitle">Charged atoms and their compounds in ionic bonding</p>
+
+      <div class="section">
+        <h2>What are Ions?</h2>
+        <p>
+          Ions are charged atoms or groups of atoms. They form when atoms lose
+          or gain electrons. A positive ion (cation) forms when electrons are
+          lost. A negative ion (anion) forms when electrons are gained.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>Predicting Ion Charges from Electron Shells</h2>
+
+        <h3>The Octet Rule</h3>
+        <p>
+          Atoms tend to react to achieve a full outer shell (8 electrons for
+          most, or 2 for first shell). This is the most stable configuration.
+        </p>
+
+        <h3>Metal Ions (Cations)</h3>
+        <p>
+          Metals lose electrons from their outer shell to achieve the stable
+          configuration of the previous noble gas.
+        </p>
+
+        <div class="code-box">
+          Sodium (Na): 2,8,1 → loses 1e⁻ → Na⁺ (2,8) charge: +1<br />
+          Magnesium (Mg): 2,8,2 → loses 2e⁻ → Mg²⁺ (2,8) charge: +2<br />
+          Aluminum (Al): 2,8,3 → loses 3e⁻ → Al³⁺ (2,8) charge: +3<br />
+          Potassium (K): 2,8,8,1 → loses 1e⁻ → K⁺ charge: +1
+        </div>
+
+        <h3>Nonmetal Ions (Anions)</h3>
+        <p>
+          Nonmetals gain electrons to achieve the stable configuration of the
+          next noble gas.
+        </p>
+
+        <div class="code-box">
+          Chlorine (Cl): 2,8,7 → gains 1e⁻ → Cl⁻ (2,8,8) charge: -1<br />
+          Oxygen (O): 2,6 → gains 2e⁻ → O²⁻ (2,8) charge: -2<br />
+          Nitrogen (N): 2,5 → gains 3e⁻ → N³⁻ (2,8) charge: -3<br />
+          Fluorine (F): 2,7 → gains 1e⁻ → F⁻ (2,8) charge: -1
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Common Monoatomic Ions</h2>
+
+        <div class="code-box">
+          COMMON CATIONS:<br />
+          H⁺, Li⁺, Na⁺, K⁺, Rb⁺, Cs⁺ (Group 1, charge +1)<br />
+          Be²⁺, Mg²⁺, Ca²⁺, Sr²⁺, Ba²⁺ (Group 2, charge +2)<br />
+          Al³⁺ (Group 13, charge +3)<br />
+          Ag⁺, Zn²⁺, Cu²⁺, Fe²⁺, Fe³⁺ (Transition metals, variable charge)<br />
+          <br />
+          COMMON ANIONS:<br />
+          F⁻, Cl⁻, Br⁻, I⁻ (Group 17, charge -1)<br />
+          O²⁻, S²⁻ (Group 16, charge -2)<br />
+          N³⁻, P³⁻ (Group 15, charge -3)
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Polyatomic Ions</h2>
+        <p>
+          Some ions consist of more than one atom bonded together. These are
+          called polyatomic ions.
+        </p>
+
+        <div class="code-box">
+          OH⁻ Hydroxide ion<br />
+          NH₄⁺ Ammonium ion<br />
+          NO₃⁻ Nitrate ion<br />
+          CO₃²⁻ Carbonate ion<br />
+          SO₄²⁻ Sulfate ion<br />
+          PO₄³⁻ Phosphate ion<br />
+          HCO₃⁻ Bicarbonate ion<br />
+          HSO₄⁻ Hydrogen sulfate ion
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Writing Ionic Formulas</h2>
+
+        <h3>The Criss-Cross Method</h3>
+        <p>
+          To write an ionic formula, swap the charges and reduce to lowest
+          terms.
+        </p>
+
+        <h3>Examples:</h3>
+        <div class="code-box">
+          Sodium chloride: Na⁺ + Cl⁻ → NaCl<br />
+          Magnesium oxide: Mg²⁺ + O²⁻ → MgO<br />
+          Aluminum chloride: Al³⁺ + Cl⁻ → AlCl₃<br />
+          Calcium carbonate: Ca²⁺ + CO₃²⁻ → CaCO₃<br />
+          Ammonium sulfate: NH₄⁺ + SO₄²⁻ → (NH₄)₂SO₄
+        </div>
+
+        <h3>Tips for Writing Formulas</h3>
+        <ul>
+          <li>Balance charges - total positive must equal total negative</li>
+          <li>
+            Use parentheses for polyatomic ions when there's more than one
+          </li>
+          <li>Write the cation (positive) first, then the anion (negative)</li>
+          <li>Reduce subscripts to lowest whole number ratio</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>Properties of Ionic Compounds</h2>
+        <ul>
+          <li>High melting points (strong ionic bonding)</li>
+          <li>High boiling points</li>
+          <li>Soluble in polar solvents like water</li>
+          <li>
+            Conduct electricity when melted or dissolved (ions are free to move)
+          </li>
+          <li>Brittle (layers shift, breaking bonds)</li>
+          <li>
+            Exist as solids at room temperature (except some very soluble ones)
+          </li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>Naming Ionic Compounds</h2>
+
+        <h3>Rule 1: Metal + Nonmetal</h3>
+        <p>Name the metal first, then the nonmetal with "-ide" ending.</p>
+        <div class="code-box">
+          NaCl → Sodium chloride<br />
+          MgO → Magnesium oxide<br />
+          CaCl₂ → Calcium chloride
+        </div>
+
+        <h3>Rule 2: With Polyatomic Ions</h3>
+        <p>Keep the polyatomic ion name.</p>
+        <div class="code-box">
+          NaNO₃ → Sodium nitrate<br />
+          CaCO₃ → Calcium carbonate<br />
+          (NH₄)₂SO₄ → Ammonium sulfate
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Key Points to Remember</h2>
+        <ul>
+          <li>Cations form when atoms lose electrons (positive charge)</li>
+          <li>Anions form when atoms gain electrons (negative charge)</li>
+          <li>Charge can be predicted from electron shells (octet rule)</li>
+          <li>Ionic formulas must balance positive and negative charges</li>
+          <li>
+            Polyatomic ions are covalently bonded groups with overall charge
+          </li>
+          <li>Use the criss-cross method to write ionic formulas</li>
+        </ul>
+      </div>
+    </div>
+
+    <footer>
+      <p>© 2026 AtomHub - GCSE Science Study Guide</p>
+    </footer>
+  </body>
+</html>

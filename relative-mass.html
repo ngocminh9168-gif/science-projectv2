@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Relative Atomic Mass - GCSE Science</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #0f172a 0%, #1a1f3a 100%);
+        color: #e2e8f0;
+        min-height: 100vh;
+      }
+
+      header {
+        background: rgba(15, 23, 42, 0.95);
+        border-bottom: 1px solid rgba(51, 216, 255, 0.2);
+        padding: 1rem 2rem;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+
+      .header-content {
+        max-width: 1400px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: #33d8ff;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .logo:hover {
+        color: #4ae8ff;
+      }
+
+      .back-btn {
+        padding: 0.6rem 1.5rem;
+        background: linear-gradient(135deg, #33d8ff 0%, #00b4d8 100%);
+        color: #0f172a;
+        font-weight: 600;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
+
+      .back-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(51, 216, 255, 0.4);
+      }
+
+      .content {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 3rem 2rem;
+      }
+
+      .page-title {
+        font-size: 2.5rem;
+        background: linear-gradient(135deg, #33d8ff 0%, #7c3aed 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin-bottom: 1rem;
+      }
+
+      .subtitle {
+        font-size: 1.2rem;
+        color: #cbd5e1;
+        margin-bottom: 2rem;
+      }
+
+      .section {
+        background: linear-gradient(
+          135deg,
+          rgba(30, 41, 59, 0.8) 0%,
+          rgba(51, 65, 85, 0.6) 100%
+        );
+        border: 1px solid rgba(51, 216, 255, 0.2);
+        border-radius: 12px;
+        padding: 2rem;
+        margin-bottom: 2rem;
+      }
+
+      .section h2 {
+        color: #33d8ff;
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+        border-bottom: 2px solid rgba(51, 216, 255, 0.3);
+        padding-bottom: 0.5rem;
+      }
+
+      .section h3 {
+        color: #7c3aed;
+        font-size: 1.3rem;
+        margin-top: 1.5rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .section p {
+        color: #cbd5e1;
+        line-height: 1.8;
+        margin-bottom: 1rem;
+      }
+
+      .section ul {
+        color: #cbd5e1;
+        margin-left: 2rem;
+        line-height: 1.8;
+      }
+
+      .section li {
+        margin-bottom: 0.5rem;
+      }
+
+      .code-box {
+        background: rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(51, 216, 255, 0.3);
+        border-radius: 6px;
+        padding: 1rem;
+        margin: 1rem 0;
+        font-family: "Courier New", monospace;
+        color: #4ae8ff;
+        overflow-x: auto;
+      }
+
+      footer {
+        background: rgba(15, 23, 42, 0.95);
+        border-top: 1px solid rgba(51, 216, 255, 0.2);
+        padding: 2rem;
+        text-align: center;
+        color: #64748b;
+      }
+
+      @media (max-width: 768px) {
+        .page-title {
+          font-size: 1.8rem;
+        }
+
+        .content {
+          padding: 2rem 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="header-content">
+        <a href="atom-science.html" class="logo">⚛️ AtomHub</a>
+        <a href="atom-science.html" class="back-btn">← Back to Home</a>
+      </div>
+    </header>
+
+    <div class="content">
+      <h1 class="page-title">Relative Atomic Mass</h1>
+      <p class="subtitle">
+        Understanding mass units and calculating relative atomic mass
+      </p>
+
+      <div class="section">
+        <h2>What is Relative Atomic Mass?</h2>
+        <p>
+          Relative atomic mass (Ar) is the average mass of atoms of an element,
+          compared to 1/12th the mass of a carbon-12 atom. It takes into account
+          the different isotopes of an element and their natural abundance (how
+          common each is).
+        </p>
+        <p>
+          On the periodic table, the numbers under element symbols represent
+          relative atomic mass. For example, chlorine has a relative atomic mass
+          of 35.5, even though no individual chlorine atom has exactly 35.5
+          nucleons!
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>Atomic Mass Units (AMU)</h2>
+
+        <h3>Definition</h3>
+        <p>
+          An atomic mass unit (u or amu) is defined so that a carbon-12 atom has
+          a mass of exactly 12 u. This is the standard reference point for
+          measuring atomic masses.
+        </p>
+
+        <div class="code-box">
+          1 u = 1/12 of the mass of a carbon-12 atom<br />
+          Carbon-12 = exactly 12 u<br />
+          Proton mass ≈ 1 u<br />
+          Neutron mass ≈ 1 u<br />
+          Electron mass ≈ 0.0005 u (negligible)
+        </div>
+
+        <h3>Why Carbon-12?</h3>
+        <ul>
+          <li>Carbon-12 is the most common isotope of carbon</li>
+          <li>Chosen as the standard because it's stable and consistent</li>
+          <li>Allows whole number mass numbers for most atoms</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>Mass Number vs. Relative Atomic Mass</h2>
+
+        <h3>Mass Number</h3>
+        <p>
+          The total number of protons and neutrons in a single atom (an
+          integer).
+        </p>
+        <div class="code-box">
+          Example: Chlorine-35<br />
+          Mass number = 35 (exactly 17 protons + 18 neutrons)
+        </div>
+
+        <h3>Relative Atomic Mass</h3>
+        <p>
+          The weighted average of all isotopes based on their abundance (can be
+          a decimal).
+        </p>
+        <div class="code-box">
+          Example: Chlorine<br />
+          Cl-35: 75% abundant<br />
+          Cl-37: 25% abundant<br />
+          Relative atomic mass = 35.5
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Calculating Relative Atomic Mass</h2>
+
+        <h3>Formula</h3>
+        <p>Relative atomic mass = Σ(mass number × relative abundance)</p>
+        <p>
+          Where relative abundance is expressed as a decimal (divide percentage
+          by 100).
+        </p>
+
+        <h3>Example 1: Chlorine</h3>
+        <div class="code-box">
+          Chlorine-35: mass 35, abundance 75% (0.75)<br />
+          Chlorine-37: mass 37, abundance 25% (0.25)<br />
+          <br />
+          Ar = (35 × 0.75) + (37 × 0.25)<br />
+          Ar = 26.25 + 9.25<br />
+          Ar = 35.5
+        </div>
+
+        <h3>Example 2: Boron</h3>
+        <div class="code-box">
+          Boron-10: mass 10, abundance 20%<br />
+          Boron-11: mass 11, abundance 80%<br />
+          <br />
+          Ar = (10 × 0.20) + (11 × 0.80)<br />
+          Ar = 2 + 8.8<br />
+          Ar = 10.8
+        </div>
+
+        <h3>Example 3: Neon</h3>
+        <div class="code-box">
+          Neon-20: mass 20, abundance 90.5%<br />
+          Neon-21: mass 21, abundance 0.3%<br />
+          Neon-22: mass 22, abundance 9.2%<br />
+          <br />
+          Ar = (20 × 0.905) + (21 × 0.003) + (22 × 0.092)<br />
+          Ar = 18.1 + 0.063 + 2.024<br />
+          Ar = 20.187 ≈ 20.2
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Working Backwards: Finding Abundance</h2>
+
+        <h3>If You Know Relative Atomic Mass</h3>
+        <p>
+          Sometimes you're given the relative atomic mass and need to find the
+          abundance of each isotope.
+        </p>
+
+        <h3>Example</h3>
+        <div class="code-box">
+          Element has two isotopes:<br />
+          Isotope A: mass 24, abundance unknown<br />
+          Isotope B: mass 26, abundance unknown<br />
+          Relative atomic mass = 25<br />
+          <br />
+          Let x = abundance of isotope A (as a decimal)<br />
+          Then (1-x) = abundance of isotope B<br />
+          <br />
+          25 = (24 × x) + (26 × (1-x))<br />
+          25 = 24x + 26 - 26x<br />
+          25 = 26 - 2x<br />
+          2x = 1<br />
+          x = 0.5 (50%)<br />
+          <br />
+          So: Isotope A = 50%, Isotope B = 50%
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Uses of Relative Atomic Mass</h2>
+        <ul>
+          <li>
+            <strong>Molar mass calculations:</strong> The molar mass (g/mol)
+            equals the relative atomic/molecular mass
+          </li>
+          <li>
+            <strong>Stoichiometry:</strong> Balancing chemical equations and
+            calculating amounts
+          </li>
+          <li>
+            <strong>Identifying elements:</strong> Mass spectrometry identifies
+            isotopes
+          </li>
+          <li>
+            <strong>Periodic table:</strong> Shows weighted average for each
+            element
+          </li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>Common Relative Atomic Masses</h2>
+        <div class="code-box">
+          Hydrogen (H): 1<br />
+          Carbon (C): 12<br />
+          Nitrogen (N): 14<br />
+          Oxygen (O): 16<br />
+          Sodium (Na): 23<br />
+          Magnesium (Mg): 24<br />
+          Chlorine (Cl): 35.5<br />
+          Potassium (K): 39<br />
+          Calcium (Ca): 40<br />
+          Iron (Fe): 56
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Key Points to Remember</h2>
+        <ul>
+          <li>Relative atomic mass is the weighted average of all isotopes</li>
+          <li>Carbon-12 is the standard reference (exactly 12 u)</li>
+          <li>Relative atomic mass can be a decimal</li>
+          <li>Mass number is always a whole number</li>
+          <li>Formula: Ar = Σ(mass number × relative abundance)</li>
+          <li>Relative abundance must sum to 1.0 (or 100%)</li>
+          <li>Numbers on the periodic table show relative atomic mass</li>
+        </ul>
+      </div>
+    </div>
+
+    <footer>
+      <p>© 2026 AtomHub - GCSE Science Study Guide</p>
+    </footer>
+  </body>
+</html>

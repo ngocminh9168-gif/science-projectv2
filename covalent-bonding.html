@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Covalent Bonding - GCSE Science</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #0f172a 0%, #1a1f3a 100%);
+        color: #e2e8f0;
+        min-height: 100vh;
+      }
+
+      header {
+        background: rgba(15, 23, 42, 0.95);
+        border-bottom: 1px solid rgba(51, 216, 255, 0.2);
+        padding: 1rem 2rem;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+
+      .header-content {
+        max-width: 1400px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: #33d8ff;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .logo:hover {
+        color: #4ae8ff;
+      }
+
+      .back-btn {
+        padding: 0.6rem 1.5rem;
+        background: linear-gradient(135deg, #33d8ff 0%, #00b4d8 100%);
+        color: #0f172a;
+        font-weight: 600;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
+
+      .back-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(51, 216, 255, 0.4);
+      }
+
+      .content {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 3rem 2rem;
+      }
+
+      .page-title {
+        font-size: 2.5rem;
+        background: linear-gradient(135deg, #33d8ff 0%, #7c3aed 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin-bottom: 1rem;
+      }
+
+      .subtitle {
+        font-size: 1.2rem;
+        color: #cbd5e1;
+        margin-bottom: 2rem;
+      }
+
+      .section {
+        background: linear-gradient(
+          135deg,
+          rgba(30, 41, 59, 0.8) 0%,
+          rgba(51, 65, 85, 0.6) 100%
+        );
+        border: 1px solid rgba(51, 216, 255, 0.2);
+        border-radius: 12px;
+        padding: 2rem;
+        margin-bottom: 2rem;
+      }
+
+      .section h2 {
+        color: #33d8ff;
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+        border-bottom: 2px solid rgba(51, 216, 255, 0.3);
+        padding-bottom: 0.5rem;
+      }
+
+      .section h3 {
+        color: #7c3aed;
+        font-size: 1.3rem;
+        margin-top: 1.5rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .section p {
+        color: #cbd5e1;
+        line-height: 1.8;
+        margin-bottom: 1rem;
+      }
+
+      .section ul {
+        color: #cbd5e1;
+        margin-left: 2rem;
+        line-height: 1.8;
+      }
+
+      .section li {
+        margin-bottom: 0.5rem;
+      }
+
+      .code-box {
+        background: rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(51, 216, 255, 0.3);
+        border-radius: 6px;
+        padding: 1rem;
+        margin: 1rem 0;
+        font-family: "Courier New", monospace;
+        color: #4ae8ff;
+        overflow-x: auto;
+      }
+
+      footer {
+        background: rgba(15, 23, 42, 0.95);
+        border-top: 1px solid rgba(51, 216, 255, 0.2);
+        padding: 2rem;
+        text-align: center;
+        color: #64748b;
+      }
+
+      @media (max-width: 768px) {
+        .page-title {
+          font-size: 1.8rem;
+        }
+
+        .content {
+          padding: 2rem 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="header-content">
+        <a href="atom-science.html" class="logo">⚛️ AtomHub</a>
+        <a href="atom-science.html" class="back-btn">← Back to Home</a>
+      </div>
+    </header>
+
+    <div class="content">
+      <h1 class="page-title">Covalent Bonding</h1>
+      <p class="subtitle">
+        Sharing of electrons between atoms to form molecules
+      </p>
+
+      <div class="section">
+        <h2>What is Covalent Bonding?</h2>
+        <p>
+          Covalent bonding is the sharing of electron pairs between atoms.
+          Unlike ionic bonding where electrons are transferred, in covalent
+          bonding both atoms share responsibility for the electrons. Covalent
+          bonds typically occur between nonmetallic elements.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>How Covalent Bonds Form</h2>
+
+        <h3>Electron Sharing</h3>
+        <p>
+          Two atoms approach each other and share electron pairs. Each atom
+          wants to achieve a stable electron configuration (full outer shell).
+          By sharing electrons, both atoms benefit from having more electrons in
+          their outer shells.
+        </p>
+
+        <h3>Single, Double, and Triple Bonds</h3>
+        <div class="code-box">
+          Single bond (H-H): 1 shared pair of electrons<br />
+          Double bond (O=O): 2 shared pairs of electrons<br />
+          Triple bond (N≡N): 3 shared pairs of electrons
+        </div>
+
+        <h3>Example: Hydrogen Molecule (H₂)</h3>
+        <p>
+          Each hydrogen atom has 1 electron. They share 2 electrons (one pair),
+          so each achieves the stable helium configuration with 2 electrons in
+          the first shell.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>Types of Covalent Compounds</h2>
+
+        <h3>Simple Molecular Compounds</h3>
+        <p>
+          Small molecules held together by strong covalent bonds. Weak forces
+          between molecules (van der Waals forces).
+        </p>
+        <ul>
+          <li>Examples: H₂O, CO₂, NH₃, CH₄</li>
+          <li>Low melting and boiling points</li>
+          <li>Usually gases or liquids at room temperature</li>
+          <li>Do not conduct electricity</li>
+        </ul>
+
+        <h3>Giant Covalent Structures</h3>
+        <p>
+          Large 3D networks where many atoms are bonded together by covalent
+          bonds. The whole structure is essentially one giant molecule.
+        </p>
+        <ul>
+          <li>
+            <strong>Diamond:</strong> Carbon atoms bonded in tetrahedral
+            arrangement
+          </li>
+          <li>
+            <strong>Silicon dioxide (SiO₂):</strong> Extended network of Si and
+            O
+          </li>
+          <li>
+            <strong>Graphite:</strong> Carbon atoms in layers, can conduct
+            electricity
+          </li>
+          <li>High melting and boiling points</li>
+          <li>Very hard (except graphite which is soft)</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>Properties of Covalent Compounds</h2>
+
+        <h3>Simple Molecules</h3>
+        <ul>
+          <li>Low melting and boiling points</li>
+          <li>Poor electrical conductivity (except when ionized)</li>
+          <li>Soluble in polar solvents like water (depends on polarity)</li>
+          <li>Weak intermolecular forces (van der Waals)</li>
+        </ul>
+
+        <h3>Giant Covalent Structures</h3>
+        <ul>
+          <li>Very high melting and boiling points</li>
+          <li>Very hard (strong throughout structure)</li>
+          <li>Poor electrical conductivity (except graphite)</li>
+          <li>Insoluble in most solvents</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>Polar and Nonpolar Covalent Bonds</h2>
+
+        <h3>Nonpolar Covalent Bonds</h3>
+        <p>
+          Electrons are shared equally between atoms of similar
+          electronegativity (e.g., H-H, C-C, O=O).
+        </p>
+
+        <h3>Polar Covalent Bonds</h3>
+        <p>
+          Electrons are shared unequally. The more electronegative atom attracts
+          the electron pair more strongly (e.g., H-O in water, H-Cl).
+        </p>
+
+        <h3>Polar Molecules</h3>
+        <p>
+          Even though individual bonds might be polar, the overall molecule is
+          only polar if the bond polarities don't cancel out (e.g., H₂O is
+          polar, but CO₂ is nonpolar).
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>Common Covalent Compounds</h2>
+        <div class="code-box">
+          Water (H₂O) - Polar molecule, essential for life<br />
+          Carbon dioxide (CO₂) - Nonpolar, linear molecule<br />
+          Ammonia (NH₃) - Polar, nitrogen trihydride<br />
+          Methane (CH₄) - Nonpolar, tetrahedral<br />
+          Oxygen (O₂) - Diatomic, nonpolar<br />
+          Nitrogen (N₂) - Diatomic, strong triple bond
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Key Points to Remember</h2>
+        <ul>
+          <li>Covalent bonding involves sharing of electron pairs</li>
+          <li>Occurs between nonmetallic elements</li>
+          <li>Can form single, double, or triple bonds</li>
+          <li>Simple molecules have low melting/boiling points</li>
+          <li>
+            Giant covalent structures have very high melting/boiling points
+          </li>
+          <li>
+            Polar bonds form between atoms with different electronegativities
+          </li>
+          <li>
+            Van der Waals forces act between molecules in simple covalent
+            compounds
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <footer>
+      <p>© 2026 AtomHub - GCSE Science Study Guide</p>
+    </footer>
+  </body>
+</html>

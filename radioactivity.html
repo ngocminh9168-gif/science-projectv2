@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Radioactivity - AtomHub</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #0f172a 0%, #1a1f3a 100%);
+        color: #e2e8f0;
+        min-height: 100vh;
+      }
+
+      header {
+        background: rgba(15, 23, 42, 0.95);
+        border-bottom: 1px solid rgba(51, 216, 255, 0.2);
+        padding: 1rem 2rem;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+
+      .header-content {
+        max-width: 1400px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: #33d8ff;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .logo:hover {
+        color: #4ae8ff;
+      }
+
+      .back-btn {
+        padding: 0.6rem 1.5rem;
+        background: linear-gradient(135deg, #33d8ff 0%, #00b4d8 100%);
+        color: #0f172a;
+        font-weight: 600;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
+
+      .back-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(51, 216, 255, 0.4);
+      }
+
+      .content {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 3rem 2rem;
+      }
+
+      .page-title {
+        font-size: 2.5rem;
+        background: linear-gradient(135deg, #33d8ff 0%, #7c3aed 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin-bottom: 1rem;
+      }
+
+      .subtitle {
+        font-size: 1.2rem;
+        color: #cbd5e1;
+        margin-bottom: 2rem;
+      }
+
+      .section {
+        background: linear-gradient(
+          135deg,
+          rgba(30, 41, 59, 0.8) 0%,
+          rgba(51, 65, 85, 0.6) 100%
+        );
+        border: 1px solid rgba(51, 216, 255, 0.2);
+        border-radius: 12px;
+        padding: 2rem;
+        margin-bottom: 2rem;
+      }
+
+      .section h2 {
+        color: #33d8ff;
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+        border-bottom: 2px solid rgba(51, 216, 255, 0.3);
+        padding-bottom: 0.5rem;
+      }
+
+      .section h3 {
+        color: #7c3aed;
+        font-size: 1.3rem;
+        margin-top: 1.5rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .section p {
+        color: #cbd5e1;
+        line-height: 1.8;
+        margin-bottom: 1rem;
+      }
+
+      .section ul {
+        color: #cbd5e1;
+        margin-left: 2rem;
+        line-height: 1.8;
+      }
+
+      .section li {
+        margin-bottom: 0.5rem;
+      }
+
+      footer {
+        background: rgba(15, 23, 42, 0.95);
+        border-top: 1px solid rgba(51, 216, 255, 0.2);
+        padding: 2rem;
+        text-align: center;
+        color: #64748b;
+      }
+
+      @media (max-width: 768px) {
+        .page-title {
+          font-size: 1.8rem;
+        }
+
+        .content {
+          padding: 2rem 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="header-content">
+        <a href="atom-science.html" class="logo">⚛️ AtomHub</a>
+        <a href="atom-science.html" class="back-btn">← Back to Home</a>
+      </div>
+    </header>
+
+    <div class="content">
+      <h1 class="page-title">Radioactivity</h1>
+      <p class="subtitle">Understanding nuclear decay and unstable atoms</p>
+
+      <div class="section">
+        <h2>What is Radioactivity?</h2>
+        <p>
+          Radioactivity is the process by which an unstable atom releases energy
+          by emitting radiation. Some atoms have nuclei that are unstable
+          because they have too many neutrons, too many protons, or an
+          unfavorable ratio between them. These unstable atoms will
+          spontaneously emit particles or energy to become more stable, and this
+          process is called radioactive decay.
+        </p>
+        <p>
+          Marie Curie and Pierre Curie discovered radioactivity in 1896 while
+          studying uranium, work that led to the development of nuclear science
+          and medicine.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>Types of Radioactive Decay</h2>
+
+        <h3>Alpha Decay</h3>
+        <p>
+          In alpha decay, an unstable nucleus emits an alpha particle, which is
+          a helium-4 nucleus (2 protons + 2 neutrons). This reduces the atomic
+          number by 2 and the mass number by 4. Alpha particles are relatively
+          heavy and have low penetrating power.
+        </p>
+        <ul>
+          <li>Example: Uranium-238 decaying to Thorium-234</li>
+          <li>Blocked by: Paper or skin</li>
+        </ul>
+
+        <h3>Beta Decay</h3>
+        <p>
+          In beta decay, a neutron converts into a proton, releasing an electron
+          (beta particle) and an antineutrino. This increases the atomic number
+          by 1 but the mass number stays the same. Beta particles are lighter
+          than alpha particles and have more penetrating power.
+        </p>
+        <ul>
+          <li>Example: Carbon-14 decaying to Nitrogen-14</li>
+          <li>Blocked by: Aluminum foil or thin plastic</li>
+        </ul>
+
+        <h3>Gamma Decay</h3>
+        <p>
+          In gamma decay, a nucleus releases energy in the form of gamma rays
+          (high-energy electromagnetic radiation), similar to X-rays. Gamma rays
+          have no mass or charge and are very penetrating. They often occur
+          alongside alpha or beta decay.
+        </p>
+        <ul>
+          <li>No change in atomic number or mass number</li>
+          <li>Blocked by: Lead or thick concrete</li>
+        </ul>
+
+        <h3>Other Types</h3>
+        <ul>
+          <li>
+            <strong>Positron emission:</strong> A proton converts to a neutron,
+            releasing a positron (positive electron)
+          </li>
+          <li>
+            <strong>Electron capture:</strong> The nucleus captures an orbital
+            electron to convert a proton into a neutron
+          </li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>Isotopes and Mass Numbers</h2>
+        <p>
+          Isotopes are atoms of the same element with different numbers of
+          neutrons. Some isotopes are stable, while others are radioactive. The
+          ratio of neutrons to protons determines whether an isotope is stable:
+        </p>
+        <ul>
+          <li>
+            Light elements are stable with approximately equal numbers of
+            protons and neutrons
+          </li>
+          <li>Heavier elements need more neutrons than protons to be stable</li>
+          <li>
+            Very heavy elements (like uranium) tend to be radioactive regardless
+          </li>
+        </ul>
+        <p>Examples of isotopes:</p>
+        <ul>
+          <li>Carbon-12 (stable): 6 protons, 6 neutrons</li>
+          <li>Carbon-14 (radioactive): 6 protons, 8 neutrons</li>
+          <li>Uranium-235 (radioactive): 92 protons, 143 neutrons</li>
+          <li>Uranium-238 (radioactive): 92 protons, 146 neutrons</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>Half-Life</h2>
+        <p>
+          The half-life is the amount of time it takes for half of a radioactive
+          sample to decay. Every radioactive isotope has a characteristic
+          half-life, which can range from fractions of a second to billions of
+          years. Half-life helps us understand how long a radioactive substance
+          remains dangerous or useful.
+        </p>
+        <ul>
+          <li>
+            Carbon-14 half-life: 5,730 years (used for dating organic materials)
+          </li>
+          <li>Uranium-235 half-life: 704 million years</li>
+          <li>Uranium-238 half-life: 4.5 billion years</li>
+          <li>Polonium-214 half-life: 164 microseconds</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>Applications of Radioactivity</h2>
+
+        <h3>Medicine</h3>
+        <ul>
+          <li>Treating cancer with radiation therapy</li>
+          <li>Medical imaging with radioactive tracers</li>
+          <li>Sterilizing medical equipment</li>
+        </ul>
+
+        <h3>Energy</h3>
+        <ul>
+          <li>Nuclear power plants generating electricity</li>
+          <li>Providing power for space missions</li>
+        </ul>
+
+        <h3>Archaeology and Dating</h3>
+        <ul>
+          <li>
+            Carbon-14 dating for organic materials (up to 50,000 years old)
+          </li>
+          <li>Potassium-40 dating for rocks and minerals</li>
+        </ul>
+
+        <h3>Industrial Uses</h3>
+        <ul>
+          <li>Detecting faults in materials</li>
+          <li>Measuring thickness of materials</li>
+          <li>Sterilizing food</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>Nuclear Reactions</h2>
+
+        <h3>Fission</h3>
+        <p>
+          Nuclear fission occurs when a heavy nucleus splits into two smaller
+          nuclei, releasing enormous amounts of energy. This is what happens in
+          nuclear power plants and atomic bombs. For example, when Uranium-235
+          absorbs a neutron, it becomes unstable and splits.
+        </p>
+
+        <h3>Fusion</h3>
+        <p>
+          Nuclear fusion occurs when two light nuclei combine to form a heavier
+          nucleus, releasing tremendous energy. This is what powers the sun and
+          hydrogen bombs. It requires extreme temperatures and pressures to
+          occur.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>Safety and Protection</h2>
+        <p>Different types of radiation require different protection levels:</p>
+        <ul>
+          <li><strong>Alpha particles:</strong> Stopped by paper or skin</li>
+          <li>
+            <strong>Beta particles:</strong> Stopped by aluminum foil or plastic
+          </li>
+          <li>
+            <strong>Gamma rays:</strong> Require thick lead or concrete
+            shielding
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <footer>
+      <p>© 2026 AtomHub - Learning about atoms and matter</p>
+    </footer>
+  </body>
+</html>

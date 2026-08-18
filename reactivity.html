@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reactivity & Valence - GCSE Science</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #0f172a 0%, #1a1f3a 100%);
+        color: #e2e8f0;
+        min-height: 100vh;
+      }
+
+      header {
+        background: rgba(15, 23, 42, 0.95);
+        border-bottom: 1px solid rgba(51, 216, 255, 0.2);
+        padding: 1rem 2rem;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+
+      .header-content {
+        max-width: 1400px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: #33d8ff;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .logo:hover {
+        color: #4ae8ff;
+      }
+
+      .back-btn {
+        padding: 0.6rem 1.5rem;
+        background: linear-gradient(135deg, #33d8ff 0%, #00b4d8 100%);
+        color: #0f172a;
+        font-weight: 600;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
+
+      .back-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(51, 216, 255, 0.4);
+      }
+
+      .content {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 3rem 2rem;
+      }
+
+      .page-title {
+        font-size: 2.5rem;
+        background: linear-gradient(135deg, #33d8ff 0%, #7c3aed 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin-bottom: 1rem;
+      }
+
+      .subtitle {
+        font-size: 1.2rem;
+        color: #cbd5e1;
+        margin-bottom: 2rem;
+      }
+
+      .section {
+        background: linear-gradient(
+          135deg,
+          rgba(30, 41, 59, 0.8) 0%,
+          rgba(51, 65, 85, 0.6) 100%
+        );
+        border: 1px solid rgba(51, 216, 255, 0.2);
+        border-radius: 12px;
+        padding: 2rem;
+        margin-bottom: 2rem;
+      }
+
+      .section h2 {
+        color: #33d8ff;
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+        border-bottom: 2px solid rgba(51, 216, 255, 0.3);
+        padding-bottom: 0.5rem;
+      }
+
+      .section h3 {
+        color: #7c3aed;
+        font-size: 1.3rem;
+        margin-top: 1.5rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .section p {
+        color: #cbd5e1;
+        line-height: 1.8;
+        margin-bottom: 1rem;
+      }
+
+      .section ul {
+        color: #cbd5e1;
+        margin-left: 2rem;
+        line-height: 1.8;
+      }
+
+      .section li {
+        margin-bottom: 0.5rem;
+      }
+
+      .code-box {
+        background: rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(51, 216, 255, 0.3);
+        border-radius: 6px;
+        padding: 1rem;
+        margin: 1rem 0;
+        font-family: "Courier New", monospace;
+        color: #4ae8ff;
+        overflow-x: auto;
+      }
+
+      footer {
+        background: rgba(15, 23, 42, 0.95);
+        border-top: 1px solid rgba(51, 216, 255, 0.2);
+        padding: 2rem;
+        text-align: center;
+        color: #64748b;
+      }
+
+      @media (max-width: 768px) {
+        .page-title {
+          font-size: 1.8rem;
+        }
+
+        .content {
+          padding: 2rem 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="header-content">
+        <a href="atom-science.html" class="logo">⚛️ AtomHub</a>
+        <a href="atom-science.html" class="back-btn">← Back to Home</a>
+      </div>
+    </header>
+
+    <div class="content">
+      <h1 class="page-title">Reactivity & Valence</h1>
+      <p class="subtitle">
+        Understanding how electron shells determine chemical behavior
+      </p>
+
+      <div class="section">
+        <h2>What are Valence Electrons?</h2>
+        <p>
+          Valence electrons are the electrons in the outermost shell of an atom.
+          These electrons determine how an atom bonds with other atoms and how
+          reactive it is. Atoms tend to react to achieve a full outer shell
+          (stable configuration).
+        </p>
+
+        <h3>Finding Valence Electrons</h3>
+        <div class="code-box">
+          Hydrogen (H): 2,1 → 1 valence electron<br />
+          Carbon (C): 2,4 → 4 valence electrons<br />
+          Oxygen (O): 2,6 → 6 valence electrons<br />
+          Sodium (Na): 2,8,1 → 1 valence electron<br />
+          Chlorine (Cl): 2,8,7 → 7 valence electrons<br />
+          Argon (Ar): 2,8,8 → 8 valence electrons (full shell)
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>The Octet Rule</h2>
+        <p>
+          Atoms are most stable when their outer shell is full. For most atoms,
+          this means 8 electrons in the outer shell (octet). Hydrogen and helium
+          need only 2 electrons to be stable (duet rule).
+        </p>
+
+        <h3>Noble Gases - Maximum Stability</h3>
+        <p>
+          Noble gases (Group 18) already have full outer shells, making them
+          extremely unreactive.
+        </p>
+
+        <div class="code-box">
+          Helium (He): 2 (full shell, very unreactive)<br />
+          Neon (Ne): 2,8 (full shell, very unreactive)<br />
+          Argon (Ar): 2,8,8 (full shell, very unreactive)<br />
+          Krypton (Kr): 2,8,18,8 (full shell, very unreactive)
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>How Reactivity is Determined by Valence Electrons</h2>
+
+        <h3>Metals (Want to Lose Electrons)</h3>
+        <p>
+          Metals in Groups 1, 2, and 13 have 1, 2, or 3 valence electrons. It's
+          easier for them to lose these few electrons than to gain many to reach
+          the next noble gas configuration. They become cations.
+        </p>
+
+        <div class="code-box">
+          Sodium (Na): 2,8,1 → loses 1e⁻ → Na⁺ (2,8) like Neon<br />
+          Magnesium (Mg): 2,8,2 → loses 2e⁻ → Mg²⁺ (2,8) like Neon<br />
+          Aluminum (Al): 2,8,3 → loses 3e⁻ → Al³⁺ (2,8) like Neon
+        </div>
+
+        <h3>Nonmetals (Want to Gain Electrons)</h3>
+        <p>
+          Nonmetals in Groups 15, 16, and 17 have 5, 6, or 7 valence electrons.
+          It's easier for them to gain a few electrons than to lose many. They
+          become anions.
+        </p>
+
+        <div class="code-box">
+          Fluorine (F): 2,7 → gains 1e⁻ → F⁻ (2,8) like Neon<br />
+          Oxygen (O): 2,6 → gains 2e⁻ → O²⁻ (2,8) like Neon<br />
+          Nitrogen (N): 2,5 → gains 3e⁻ → N³⁻ (2,8) like Neon
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Periodic Table Trends in Reactivity</h2>
+
+        <h3>Group 1 (Alkali Metals) - Decreasing Reactivity Down the Group</h3>
+        <p>
+          All have 1 valence electron, but as you go down, the electron is
+          further from the nucleus and easier to lose.
+        </p>
+        <div class="code-box">
+          Lithium (Li): Least reactive<br />
+          Sodium (Na): More reactive<br />
+          Potassium (K): Even more reactive<br />
+          Cesium (Cs): Most reactive (most easily loses its electron)
+        </div>
+        <p>
+          Reactivity increases down Group 1 because the valence electron is
+          farther away and held less tightly.
+        </p>
+
+        <h3>Group 17 (Halogens) - Increasing Reactivity Up the Group</h3>
+        <p>
+          All have 7 valence electrons and need to gain 1, but reactivity
+          increases as you go up.
+        </p>
+        <div class="code-box">
+          Fluorine (F): Most reactive (strongest pull on electrons)<br />
+          Chlorine (Cl): Quite reactive<br />
+          Bromine (Br): Less reactive<br />
+          Iodine (I): Least reactive
+        </div>
+        <p>
+          Reactivity decreases down Group 17 because the pull on gained
+          electrons becomes weaker as the nucleus is farther away.
+        </p>
+
+        <h3>Group 18 (Noble Gases) - No Reactivity</h3>
+        <p>
+          All have full outer shells (8 electrons, or 2 for helium), so they
+          don't need to gain or lose electrons. They're completely unreactive.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>Predicting Chemical Reactions</h2>
+
+        <h3>The Golden Rule</h3>
+        <p>
+          Atoms react to achieve stable electron configurations (usually a full
+          outer shell).
+        </p>
+
+        <h3>Using Valence Electrons to Predict Reactions</h3>
+
+        <h3>Example 1: Will Sodium and Chlorine React?</h3>
+        <div class="code-box">
+          Sodium (Na): 2,8,1 → wants to lose 1 electron<br />
+          Chlorine (Cl): 2,8,7 → wants to gain 1 electron<br />
+          Perfect match! They react to form NaCl
+        </div>
+
+        <h3>Example 2: Will Sodium and Sodium React?</h3>
+        <div class="code-box">
+          Sodium + Sodium: both want to lose electrons<br />
+          No transfer possible, so they don't form a compound
+        </div>
+
+        <h3>Example 3: Why is Argon Unreactive?</h3>
+        <div class="code-box">
+          Argon (Ar): 2,8,8 → full outer shell already<br />
+          No reason to gain or lose electrons<br />
+          Remains unreactive
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Reactivity and Bonding Type</h2>
+
+        <h3>Metals + Nonmetals → Ionic Bonding</h3>
+        <p>
+          Metal (loses electrons easily) + Nonmetal (gains electrons easily) =
+          Electron transfer = Ionic compound
+        </p>
+
+        <h3>Nonmetal + Nonmetal → Covalent Bonding</h3>
+        <p>
+          Neither wants to lose electrons completely, so they share electrons =
+          Covalent compound
+        </p>
+
+        <h3>Metal + Metal → Metallic Bonding</h3>
+        <p>
+          Metals combine with each other, with valence electrons delocalized
+          throughout the structure
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>Valence and Group Number</h2>
+
+        <div class="code-box">
+          Group 1: 1 valence electron (1 oxidation state: +1)<br />
+          Group 2: 2 valence electrons (1 oxidation state: +2)<br />
+          Group 13: 3 valence electrons (1 oxidation state: +3)<br />
+          Group 14: 4 valence electrons (can share 4)<br />
+          Group 15: 5 valence electrons (usually -3 charge)<br />
+          Group 16: 6 valence electrons (usually -2 charge)<br />
+          Group 17: 7 valence electrons (usually -1 charge)<br />
+          Group 18: 8 valence electrons (unreactive)
+        </div>
+
+        <p>
+          For Groups 1-3 and 13-17, you can often predict the charge: Group
+          number - 18 (for anions) or Group number (for cations).
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>Activities Series (Reactivity of Metals)</h2>
+        <p>
+          The reactivity series ranks metals by how easily they lose electrons.
+          More reactive metals are higher in the series.
+        </p>
+
+        <div class="code-box">
+          Most Reactive ↑<br />
+          Potassium (K) (group 1, most easily loses 1e⁻)<br />
+          Sodium (Na)<br />
+          Calcium (Ca)<br />
+          Magnesium (Mg)<br />
+          Aluminum (Al)<br />
+          Zinc (Zn)<br />
+          Iron (Fe)<br />
+          Copper (Cu)<br />
+          Silver (Ag)<br />
+          Gold (Au) (group 11, least easily loses electrons)<br />
+          Least Reactive ↓
+        </div>
+
+        <p>
+          More reactive metals can displace less reactive metals from their
+          compounds.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>Key Points to Remember</h2>
+        <ul>
+          <li>Valence electrons are in the outermost shell</li>
+          <li>Atoms want full outer shells (octet rule)</li>
+          <li>Metals lose valence electrons (become cations)</li>
+          <li>Nonmetals gain electrons (become anions)</li>
+          <li>Noble gases have full shells and are unreactive</li>
+          <li>Reactivity trends follow periodic table patterns</li>
+          <li>Group number often relates to valence electrons</li>
+          <li>Chemical reactions involve achieving stable configurations</li>
+        </ul>
+      </div>
+    </div>
+
+    <footer>
+      <p>© 2026 AtomHub - GCSE Science Study Guide</p>
+    </footer>
+  </body>
+</html>

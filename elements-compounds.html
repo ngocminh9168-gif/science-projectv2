@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elements & Compounds - GCSE Science</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #0f172a 0%, #1a1f3a 100%);
+        color: #e2e8f0;
+        min-height: 100vh;
+      }
+
+      header {
+        background: rgba(15, 23, 42, 0.95);
+        border-bottom: 1px solid rgba(51, 216, 255, 0.2);
+        padding: 1rem 2rem;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+
+      .header-content {
+        max-width: 1400px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: #33d8ff;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .logo:hover {
+        color: #4ae8ff;
+      }
+
+      .back-btn {
+        padding: 0.6rem 1.5rem;
+        background: linear-gradient(135deg, #33d8ff 0%, #00b4d8 100%);
+        color: #0f172a;
+        font-weight: 600;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
+
+      .back-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(51, 216, 255, 0.4);
+      }
+
+      .content {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 3rem 2rem;
+      }
+
+      .page-title {
+        font-size: 2.5rem;
+        background: linear-gradient(135deg, #33d8ff 0%, #7c3aed 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin-bottom: 1rem;
+      }
+
+      .subtitle {
+        font-size: 1.2rem;
+        color: #cbd5e1;
+        margin-bottom: 2rem;
+      }
+
+      .section {
+        background: linear-gradient(
+          135deg,
+          rgba(30, 41, 59, 0.8) 0%,
+          rgba(51, 65, 85, 0.6) 100%
+        );
+        border: 1px solid rgba(51, 216, 255, 0.2);
+        border-radius: 12px;
+        padding: 2rem;
+        margin-bottom: 2rem;
+      }
+
+      .section h2 {
+        color: #33d8ff;
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+        border-bottom: 2px solid rgba(51, 216, 255, 0.3);
+        padding-bottom: 0.5rem;
+      }
+
+      .section h3 {
+        color: #7c3aed;
+        font-size: 1.3rem;
+        margin-top: 1.5rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .section p {
+        color: #cbd5e1;
+        line-height: 1.8;
+        margin-bottom: 1rem;
+      }
+
+      .section ul {
+        color: #cbd5e1;
+        margin-left: 2rem;
+        line-height: 1.8;
+      }
+
+      .section li {
+        margin-bottom: 0.5rem;
+      }
+
+      .code-box {
+        background: rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(51, 216, 255, 0.3);
+        border-radius: 6px;
+        padding: 1rem;
+        margin: 1rem 0;
+        font-family: "Courier New", monospace;
+        color: #4ae8ff;
+        overflow-x: auto;
+      }
+
+      footer {
+        background: rgba(15, 23, 42, 0.95);
+        border-top: 1px solid rgba(51, 216, 255, 0.2);
+        padding: 2rem;
+        text-align: center;
+        color: #64748b;
+      }
+
+      @media (max-width: 768px) {
+        .page-title {
+          font-size: 1.8rem;
+        }
+
+        .content {
+          padding: 2rem 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="header-content">
+        <a href="atom-science.html" class="logo">⚛️ AtomHub</a>
+        <a href="atom-science.html" class="back-btn">← Back to Home</a>
+      </div>
+    </header>
+
+    <div class="content">
+      <h1 class="page-title">Elements & Compounds</h1>
+      <p class="subtitle">
+        Understanding pure substances, mixtures, and separation methods
+      </p>
+
+      <div class="section">
+        <h2>What are Elements?</h2>
+        <p>
+          An element is a pure substance made of only one type of atom. Each
+          element has a unique atomic number (number of protons). Elements
+          cannot be broken down into simpler substances by chemical means.
+        </p>
+
+        <h3>Examples of Elements:</h3>
+        <div class="code-box">
+          Carbon (C) - Atomic number 6<br />
+          Oxygen (O) - Atomic number 8<br />
+          Hydrogen (H) - Atomic number 1<br />
+          Sodium (Na) - Atomic number 11<br />
+          Chlorine (Cl) - Atomic number 17
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>What are Compounds?</h2>
+        <p>
+          A compound is a pure substance made of two or more elements chemically
+          bonded together. Compounds have fixed composition and can be broken
+          down into their constituent elements.
+        </p>
+
+        <h3>Properties of Compounds</h3>
+        <ul>
+          <li>Different from the properties of their individual elements</li>
+          <li>Have fixed melting and boiling points</li>
+          <li>Cannot be separated by physical methods</li>
+          <li>Have a definite chemical formula</li>
+        </ul>
+
+        <h3>Examples of Compounds:</h3>
+        <div class="code-box">
+          Water (H₂O) - 2 hydrogen, 1 oxygen<br />
+          Carbon dioxide (CO₂) - 1 carbon, 2 oxygen<br />
+          Sodium chloride (NaCl) - 1 sodium, 1 chlorine<br />
+          Ammonia (NH₃) - 1 nitrogen, 3 hydrogen<br />
+          Methane (CH₄) - 1 carbon, 4 hydrogen
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>What are Mixtures?</h2>
+        <p>
+          A mixture is made of two or more pure substances (elements or
+          compounds) that are not chemically bonded. The components retain their
+          original properties and can be separated by physical methods.
+        </p>
+
+        <h3>Properties of Mixtures</h3>
+        <ul>
+          <li>Components can be in any proportion</li>
+          <li>No new substance is formed</li>
+          <li>Properties depend on the proportion of components</li>
+          <li>Can be separated by physical methods</li>
+        </ul>
+
+        <h3>Examples of Mixtures:</h3>
+        <ul>
+          <li>Salt water (salt and water)</li>
+          <li>Sand and gravel (different particles)</li>
+          <li>Air (nitrogen, oxygen, argon, etc.)</li>
+          <li>Seawater (water and dissolved salts)</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>Comparing Elements, Compounds, and Mixtures</h2>
+        <div class="code-box">
+          ELEMENTS: COMPOUNDS: MIXTURES:<br />
+          One type of atom Multiple elements Multiple substances<br />
+          Cannot be broken down Chemically bonded Not bonded<br />
+          (chemically) Fixed composition Variable composition<br />
+          Fixed properties Fixed properties Variable properties<br />
+          <br />
+          Examples: Examples: Examples:<br />
+          Oxygen, Carbon, Water, Salt, Saltwater, Air,<br />
+          Iron, Gold Sugar, Ammonia Concrete, Brass
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Separation Methods for Mixtures</h2>
+
+        <h3>Filtration</h3>
+        <p>
+          Separates insoluble solids from liquids using filter paper. The solid
+          is retained while the liquid passes through.
+        </p>
+        <ul>
+          <li>Used for: Sand and water, soil and water</li>
+          <li>When to use: Solid particles are large enough to be trapped</li>
+        </ul>
+
+        <h3>Evaporation</h3>
+        <p>
+          Heats a solution to evaporate the solvent (usually water), leaving the
+          dissolved solute behind as crystals or powder.
+        </p>
+        <ul>
+          <li>Used for: Salt from seawater, sugar from solution</li>
+          <li>
+            When to use: Solute is non-volatile (doesn't easily evaporate)
+          </li>
+        </ul>
+
+        <h3>Crystallization</h3>
+        <p>
+          A more controlled form of evaporation that produces pure crystals of
+          the solute by slowly cooling a hot saturated solution.
+        </p>
+        <ul>
+          <li>Used for: Copper sulfate crystals, salt crystals</li>
+          <li>When to use: Need to obtain pure crystals</li>
+        </ul>
+
+        <h3>Chromatography</h3>
+        <p>
+          Separates components of a mixture based on their ability to dissolve
+          in a moving solvent. Different substances travel different distances.
+        </p>
+        <ul>
+          <li>Used for: Plant pigments, dyes, amino acids</li>
+          <li>When to use: Need to separate similar soluble substances</li>
+        </ul>
+
+        <h3>Distillation</h3>
+        <p>
+          Separates components based on different boiling points. The mixture is
+          heated to evaporate, then the vapor is condensed back to a liquid.
+        </p>
+        <ul>
+          <li>
+            Used for: Separating crude oil, obtaining pure water from saltwater
+          </li>
+          <li>
+            When to use: Components have significantly different boiling points
+          </li>
+        </ul>
+
+        <h3>Magnetic Separation</h3>
+        <p>
+          Uses a magnet to separate magnetic materials from non-magnetic
+          materials in a mixture.
+        </p>
+        <ul>
+          <li>Used for: Iron filings and sand, recycling metals</li>
+          <li>When to use: One component is magnetic</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>Choosing the Right Separation Method</h2>
+        <div class="code-box">
+          MIXTURE TYPE METHOD REASON<br />
+          Solid + Liquid Filtration Solid is trapped by filter<br />
+          Salt + Water Evaporation Water evaporates, salt remains<br />
+          Plant pigments Chromatography Different solubility<br />
+          Oil and water Separatory funnel Different densities<br />
+          Saltwater Distillation Different boiling points<br />
+          Iron + Sand Magnetic separation Iron is magnetic
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Key Points to Remember</h2>
+        <ul>
+          <li>Elements contain one type of atom</li>
+          <li>Compounds are chemically bonded elements</li>
+          <li>Mixtures are physically combined substances</li>
+          <li>Mixtures can be separated by physical methods</li>
+          <li>Different mixtures require different separation techniques</li>
+          <li>Pure substances have fixed properties</li>
+          <li>
+            Mixtures can have variable properties depending on composition
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <footer>
+      <p>© 2026 AtomHub - GCSE Science Study Guide</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,846 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AtomHub - Explore the World of Atoms</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #0f172a 0%, #1a1f3a 100%);
+        color: #e2e8f0;
+        min-height: 100vh;
+      }
+
+      /* Header */
+      header {
+        background: rgba(15, 23, 42, 0.95);
+        border-bottom: 1px solid rgba(51, 216, 255, 0.2);
+        padding: 1rem 2rem;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+
+      .header-content {
+        max-width: 1400px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: #33d8ff;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .logo:hover {
+        color: #4ae8ff;
+      }
+
+      .nav-buttons {
+        display: flex;
+        gap: 1rem;
+      }
+
+      .btn {
+        padding: 0.6rem 1.5rem;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 0.95rem;
+        transition: all 0.3s ease;
+        text-decoration: none;
+      }
+
+      .btn-primary {
+        background: linear-gradient(135deg, #33d8ff 0%, #00b4d8 100%);
+        color: #0f172a;
+        font-weight: 600;
+      }
+
+      .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(51, 216, 255, 0.4);
+      }
+
+      .btn-secondary {
+        background: transparent;
+        color: #94a3b8;
+        border: 1px solid #475569;
+      }
+
+      .btn-secondary:hover {
+        color: #33d8ff;
+        border-color: #33d8ff;
+      }
+
+      /* Hero Section */
+      .hero {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 5rem 2rem;
+        text-align: center;
+      }
+
+      .hero h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        background: linear-gradient(135deg, #33d8ff 0%, #7c3aed 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .hero p {
+        font-size: 1.2rem;
+        color: #cbd5e1;
+        margin-bottom: 2rem;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      /* Search Bar */
+      .search-section {
+        max-width: 600px;
+        margin: 0 auto 4rem;
+        display: flex;
+        gap: 1rem;
+      }
+
+      .search-box {
+        flex: 1;
+        padding: 1rem;
+        background: rgba(30, 41, 59, 0.8);
+        border: 1px solid rgba(51, 216, 255, 0.3);
+        border-radius: 8px;
+        color: #e2e8f0;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+      }
+
+      .search-box:focus {
+        outline: none;
+        border-color: #33d8ff;
+        box-shadow: 0 0 20px rgba(51, 216, 255, 0.2);
+        background: rgba(30, 41, 59, 0.95);
+      }
+
+      .search-box::placeholder {
+        color: #64748b;
+      }
+
+      /* Pulsing Glow Effect */
+      @keyframes pulse-glow {
+        0%,
+        100% {
+          box-shadow: 0 0 10px rgba(51, 216, 255, 0.3);
+        }
+        50% {
+          box-shadow: 0 0 30px rgba(51, 216, 255, 0.6);
+        }
+      }
+
+      .search-box {
+        animation: pulse-glow 3s ease-in-out infinite;
+      }
+
+      /* Content Section */
+      .content-section {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 2rem;
+      }
+
+      .section-title {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        color: #f1f5f9;
+      }
+
+      .section-subtitle {
+        font-size: 1rem;
+        color: #94a3b8;
+        margin-bottom: 2rem;
+      }
+
+      /* Cards Grid */
+      .cards-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-bottom: 4rem;
+      }
+
+      .card {
+        background: linear-gradient(
+          135deg,
+          rgba(30, 41, 59, 0.8) 0%,
+          rgba(51, 65, 85, 0.6) 100%
+        );
+        border: 1px solid rgba(51, 216, 255, 0.2);
+        border-radius: 12px;
+        padding: 2rem;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        text-decoration: none;
+        color: inherit;
+        display: block;
+      }
+
+      .card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(51, 216, 255, 0.1),
+          transparent
+        );
+        transition: left 0.3s ease;
+      }
+
+      .card:hover {
+        border-color: #33d8ff;
+        transform: translateY(-8px);
+        box-shadow: 0 12px 30px rgba(51, 216, 255, 0.25);
+      }
+
+      .card:hover::before {
+        left: 100%;
+      }
+
+      .card-icon {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        animation: icon-bounce 3s ease-in-out infinite;
+      }
+
+      @keyframes icon-bounce {
+        0%,
+        100% {
+          transform: translateY(0) scale(1);
+        }
+        50% {
+          transform: translateY(-10px) scale(1.1);
+        }
+      }
+
+      .card:hover .card-icon {
+        animation: icon-spin 0.6s ease-in-out;
+      }
+
+      @keyframes icon-spin {
+        0% {
+          transform: rotateZ(0deg) scale(1);
+        }
+        50% {
+          transform: rotateZ(180deg) scale(1.2);
+        }
+        100% {
+          transform: rotateZ(360deg) scale(1);
+        }
+      }
+
+      .card-title {
+        font-size: 1.3rem;
+        margin-bottom: 0.5rem;
+        color: #33d8ff;
+        font-weight: 600;
+      }
+
+      .card-description {
+        color: #cbd5e1;
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin-bottom: 1rem;
+      }
+
+      .card-meta {
+        display: flex;
+        gap: 1rem;
+        font-size: 0.85rem;
+        color: #94a3b8;
+      }
+
+      /* Info Section */
+      .info-section {
+        background: linear-gradient(
+          135deg,
+          rgba(51, 216, 255, 0.1) 0%,
+          rgba(124, 58, 237, 0.1) 100%
+        );
+        border: 1px solid rgba(51, 216, 255, 0.2);
+        border-radius: 12px;
+        padding: 3rem 2rem;
+        margin-bottom: 4rem;
+      }
+
+      .info-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+      }
+
+      .info-item h3 {
+        color: #33d8ff;
+        margin-bottom: 0.5rem;
+        font-size: 1.2rem;
+      }
+
+      .info-item p {
+        color: #cbd5e1;
+        line-height: 1.6;
+      }
+
+      /* Footer */
+      footer {
+        background: rgba(15, 23, 42, 0.95);
+        border-top: 1px solid rgba(51, 216, 255, 0.2);
+        padding: 3rem 2rem;
+        margin-top: 4rem;
+      }
+
+      .footer-content {
+        max-width: 1400px;
+        margin: 0 auto;
+      }
+
+      .footer-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 2rem;
+        margin-bottom: 2rem;
+      }
+
+      .footer-section h4 {
+        color: #33d8ff;
+        margin-bottom: 1rem;
+      }
+
+      .footer-section a {
+        display: block;
+        color: #94a3b8;
+        text-decoration: none;
+        margin-bottom: 0.5rem;
+        transition: color 0.3s ease;
+      }
+
+      .footer-section a:hover {
+        color: #33d8ff;
+      }
+
+      .footer-bottom {
+        text-align: center;
+        color: #64748b;
+        padding-top: 2rem;
+        border-top: 1px solid rgba(51, 216, 255, 0.1);
+      }
+
+      /* Vocab Animation Under Cards */
+      .floating-vocab-container {
+        position: relative;
+        width: 100%;
+        height: 300px;
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+        pointer-events: none;
+        overflow: hidden;
+        z-index: 5;
+      }
+
+      .vocab-chip {
+        position: absolute;
+        background: rgba(51, 216, 255, 0.15);
+        border: 1px solid rgba(51, 216, 255, 0.4);
+        border-radius: 20px;
+        padding: 0.6rem 1.2rem;
+        color: #33d8ff;
+        font-size: 0.9rem;
+        font-weight: 600;
+        backdrop-filter: blur(10px);
+        animation: floatUp 15s infinite ease-in-out;
+        white-space: nowrap;
+      }
+
+      @keyframes floatUp {
+        0%,
+        100% {
+          transform: translateY(300px) translateX(0) rotateZ(0deg);
+          opacity: 0;
+        }
+        10% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.8;
+        }
+        90% {
+          opacity: 1;
+        }
+        100% {
+          transform: translateY(-50px) translateX(100px) rotateZ(360deg);
+          opacity: 0;
+        }
+      }
+
+      @keyframes floatUp2 {
+        0%,
+        100% {
+          transform: translateY(300px) translateX(0) rotateZ(0deg);
+          opacity: 0;
+        }
+        10% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.8;
+        }
+        90% {
+          opacity: 1;
+        }
+        100% {
+          transform: translateY(-50px) translateX(-100px) rotateZ(-360deg);
+          opacity: 0;
+        }
+      }
+
+      .vocab-chip:nth-child(2) {
+        animation: floatUp2 18s infinite ease-in-out;
+      }
+      .vocab-chip:nth-child(3) {
+        animation: floatUp 20s infinite ease-in-out;
+      }
+      .vocab-chip:nth-child(4) {
+        animation: floatUp2 16s infinite ease-in-out;
+      }
+      .vocab-chip:nth-child(5) {
+        animation: floatUp 17s infinite ease-in-out;
+      }
+      .vocab-chip:nth-child(6) {
+        animation: floatUp2 19s infinite ease-in-out;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .hero h1 {
+          font-size: 2rem;
+        }
+
+        .hero p {
+          font-size: 1rem;
+        }
+
+        .cards-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .search-section {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="header-content">
+        <a href="#" class="logo">⚛️ AtomHub</a>
+        <div class="nav-buttons"></div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <h1>GCSE Science: Atoms and Matter</h1>
+      <p>
+        Complete guide to atomic structure, bonding, and the periodic table
+        based on GCSE Science (Single Award) curriculum.
+      </p>
+
+      <div class="search-section">
+        <input
+          type="text"
+          class="search-box"
+          placeholder="Search atoms, elements, bonding, periodic table..."
+        />
+      </div>
+    </section>
+
+    <!-- Featured Topics -->
+    <section class="content-section">
+      <h2 class="section-title">Complete Atom Topics</h2>
+      <p class="section-subtitle">
+        Master all essential concepts for GCSE Science
+      </p>
+
+      <div class="cards-grid">
+        <a href="atomic-structure.html" class="card">
+          <div class="card-icon">⚛️</div>
+          <div class="card-title">Atomic Structure</div>
+          <p class="card-description">
+            Protons, neutrons, and electrons. Learn about the nucleus, atomic
+            number, mass number, and how atoms are organized.
+          </p>
+          <div class="card-meta">
+            <span>⭐ Foundation</span>
+            <span>📚 Essential</span>
+          </div>
+        </a>
+
+        <a href="periodic-table.html" class="card">
+          <div class="card-icon">📊</div>
+          <div class="card-title">The Periodic Table</div>
+          <p class="card-description">
+            How elements are organized by atomic number. Understand groups,
+            periods, and trends in properties.
+          </p>
+          <div class="card-meta">
+            <span>⭐ Foundation</span>
+            <span>📚 Essential</span>
+          </div>
+        </a>
+
+        <a href="isotopes.html" class="card">
+          <div class="card-icon">🔀</div>
+          <div class="card-title">Isotopes</div>
+          <p class="card-description">
+            Atoms of the same element with different numbers of neutrons.
+            Understand relative atomic mass and abundance.
+          </p>
+          <div class="card-meta">
+            <span>⭐ Intermediate</span>
+            <span>📚 Important</span>
+          </div>
+        </a>
+
+        <a href="electron-shells.html" class="card">
+          <div class="card-icon">🌀</div>
+          <div class="card-title">Electron Shells</div>
+          <p class="card-description">
+            How electrons are arranged in shells. First shell (2), second shell
+            (8), and how this affects reactivity.
+          </p>
+          <div class="card-meta">
+            <span>⭐ Intermediate</span>
+            <span>📚 Important</span>
+          </div>
+        </a>
+
+        <a href="ionic-bonding.html" class="card">
+          <div class="card-icon">⚡</div>
+          <div class="card-title">Ionic Bonding</div>
+          <p class="card-description">
+            Transfer of electrons between atoms. How ions form and create ionic
+            compounds. Properties of ionic bonds.
+          </p>
+          <div class="card-meta">
+            <span>⭐ Core</span>
+            <span>📚 Essential</span>
+          </div>
+        </a>
+
+        <a href="covalent-bonding.html" class="card">
+          <div class="card-icon">🔗</div>
+          <div class="card-title">Covalent Bonding</div>
+          <p class="card-description">
+            Sharing of electrons between atoms. Simple molecules and giant
+            structures. Properties of covalent compounds.
+          </p>
+          <div class="card-meta">
+            <span>⭐ Core</span>
+            <span>📚 Essential</span>
+          </div>
+        </a>
+
+        <a href="metallic-bonding.html" class="card">
+          <div class="card-icon">💎</div>
+          <div class="card-title">Metallic Bonding</div>
+          <p class="card-description">
+            Bonding in metals. Sea of electrons model. Properties of metals:
+            conductivity, malleability, ductility.
+          </p>
+          <div class="card-meta">
+            <span>⭐ Intermediate</span>
+            <span>📚 Important</span>
+          </div>
+        </a>
+
+        <a href="ions.html" class="card">
+          <div class="card-icon">🎯</div>
+          <div class="card-title">Ions and Ionic Compounds</div>
+          <p class="card-description">
+            Charged atoms and ionic formulas. Predicting ion charges from
+            electron shells. Writing chemical formulas.
+          </p>
+          <div class="card-meta">
+            <span>⭐ Core</span>
+            <span>📚 Essential</span>
+          </div>
+        </a>
+
+        <a href="elements-compounds.html" class="card">
+          <div class="card-icon">🧬</div>
+          <div class="card-title">Elements & Compounds</div>
+          <p class="card-description">
+            Difference between elements, compounds, and mixtures. Pure
+            substances and mixtures. Separation methods.
+          </p>
+          <div class="card-meta">
+            <span>⭐ Foundation</span>
+            <span>📚 Essential</span>
+          </div>
+        </a>
+
+        <a href="relative-mass.html" class="card">
+          <div class="card-icon">⚖️</div>
+          <div class="card-title">Relative Atomic Mass</div>
+          <p class="card-description">
+            Atomic mass units (AMU), relative atomic mass, and how it's used in
+            calculations. Isotope contributions.
+          </p>
+          <div class="card-meta">
+            <span>⭐ Intermediate</span>
+            <span>📚 Important</span>
+          </div>
+        </a>
+
+        <a href="chemical-formulas.html" class="card">
+          <div class="card-icon">📝</div>
+          <div class="card-title">Chemical Formulas</div>
+          <p class="card-description">
+            Writing and understanding chemical formulas. Empirical formulas,
+            molecular formulas, and ionic formulas.
+          </p>
+          <div class="card-meta">
+            <span>⭐ Core</span>
+            <span>📚 Essential</span>
+          </div>
+        </a>
+
+        <a href="reactivity.html" class="card">
+          <div class="card-icon">🔥</div>
+          <div class="card-title">Reactivity & Valence</div>
+          <p class="card-description">
+            How electron shells determine reactivity. Valence electrons, noble
+            gases, and trends in the periodic table.
+          </p>
+          <div class="card-meta">
+            <span>⭐ Core</span>
+            <span>📚 Essential</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Vocab Animation Under Cards -->
+      <div class="floating-vocab-container">
+        <div class="vocab-chip" style="left: 5%">Electrons</div>
+        <div class="vocab-chip" style="left: 15%">Bonding</div>
+        <div class="vocab-chip" style="left: 65%">Protons</div>
+        <div class="vocab-chip" style="left: 80%">Ions</div>
+        <div class="vocab-chip" style="left: 40%">Atoms</div>
+        <div class="vocab-chip" style="left: 70%">Valence</div>
+      </div>
+    </section>
+
+    <!-- Key Information Section -->
+    <section class="content-section">
+      <div class="info-section">
+        <h2 class="section-title">Key Concepts Summary</h2>
+
+        <div class="info-grid">
+          <div class="info-item">
+            <h3>Atomic Structure</h3>
+            <p>
+              Nucleus (protons + neutrons) at center. Electrons in shells around
+              nucleus. Protons = positive charge, electrons = negative charge,
+              neutrons = neutral.
+            </p>
+          </div>
+
+          <div class="info-item">
+            <h3>Atomic Number</h3>
+            <p>
+              Number of protons in nucleus. Defines the element. All atoms of
+              same element have same atomic number.
+            </p>
+          </div>
+
+          <div class="info-item">
+            <h3>Mass Number</h3>
+            <p>
+              Total protons + neutrons. Different isotopes of same element have
+              different mass numbers.
+            </p>
+          </div>
+
+          <div class="info-item">
+            <h3>Electron Shells</h3>
+            <p>
+              First shell: max 2 electrons. Second shell: max 8 electrons. Third
+              shell: max 8 electrons (in simple model).
+            </p>
+          </div>
+
+          <div class="info-item">
+            <h3>Ionic Bonding</h3>
+            <p>
+              Electrons transferred from metal to nonmetal. Creates positive and
+              negative ions. Strong electrostatic attraction.
+            </p>
+          </div>
+
+          <div class="info-item">
+            <h3>Covalent Bonding</h3>
+            <p>
+              Electrons shared between atoms. Both atoms gain stability. Forms
+              molecules. Strong directional bonds.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content">
+        <div class="footer-grid">
+          <div class="footer-section">
+            <h4>About</h4>
+            <a href="about.html">About Us</a>
+            <a href="news.html">News & Articles</a>
+            <a href="careers.html">Careers</a>
+            <a href="contact.html">Contact</a>
+          </div>
+
+          <div class="footer-section">
+            <h4>Learning</h4>
+            <a href="tutorials.html">Tutorials</a>
+            <a href="beginner-guide.html">Beginner Guide</a>
+            <a href="advanced-topics.html">Advanced Topics</a>
+            <a href="faq.html">FAQ</a>
+          </div>
+
+          <div class="footer-section">
+            <h4>Resources</h4>
+            <a href="documentation.html">Documentation</a>
+            <a href="periodic-table.html">Periodic Table</a>
+            <a href="interactive-tools.html">Interactive Tools</a>
+            <a href="research-papers.html">Research Papers</a>
+          </div>
+
+          <div class="footer-section">
+            <h4>Legal</h4>
+            <a href="terms-of-use.html">Terms of Use</a>
+            <a href="privacy.html">Privacy Policy</a>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>
+            © 2026 AtomHub. A science education platform dedicated to atomic
+            knowledge.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Working search functionality
+      const searchBox = document.querySelector(".search-box");
+      const cards = document.querySelectorAll(".card");
+
+      // Search as user types
+      searchBox.addEventListener("input", function () {
+        const searchTerm = this.value.toLowerCase().trim();
+
+        if (searchTerm === "") {
+          // Show all cards if search is empty
+          cards.forEach((card) => {
+            card.style.display = "block";
+          });
+        } else {
+          // Filter cards based on search
+          cards.forEach((card) => {
+            const title = card
+              .querySelector(".card-title")
+              .textContent.toLowerCase();
+            const description = card
+              .querySelector(".card-description")
+              .textContent.toLowerCase();
+
+            if (
+              title.includes(searchTerm) ||
+              description.includes(searchTerm)
+            ) {
+              card.style.display = "block";
+            } else {
+              card.style.display = "none";
+            }
+          });
+        }
+      });
+
+      // Card hover effects
+      cards.forEach((card) => {
+        card.addEventListener("mouseenter", function () {
+          this.style.opacity = "0.9";
+          this.style.transform = "scale(1.02)";
+        });
+        card.addEventListener("mouseleave", function () {
+          this.style.opacity = "1";
+          this.style.transform = "scale(1)";
+        });
+      });
+
+      // Animate cards on scroll into view
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.style.animation = "cardSlideIn 0.5s ease-out";
+            observer.unobserve(entry.target);
+          }
+        });
+      });
+
+      cards.forEach((card) => {
+        observer.observe(card);
+      });
+
+      // Add CSS animation dynamically
+      const style = document.createElement("style");
+      style.textContent = `
+        @keyframes cardSlideIn {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+      `;
+      document.head.appendChild(style);
+    </script>
+  </body>
+</html>

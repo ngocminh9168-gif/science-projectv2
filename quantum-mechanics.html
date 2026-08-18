@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quantum Mechanics - AtomHub</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #0f172a 0%, #1a1f3a 100%);
+        color: #e2e8f0;
+        min-height: 100vh;
+      }
+
+      header {
+        background: rgba(15, 23, 42, 0.95);
+        border-bottom: 1px solid rgba(51, 216, 255, 0.2);
+        padding: 1rem 2rem;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+
+      .header-content {
+        max-width: 1400px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: #33d8ff;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .logo:hover {
+        color: #4ae8ff;
+      }
+
+      .back-btn {
+        padding: 0.6rem 1.5rem;
+        background: linear-gradient(135deg, #33d8ff 0%, #00b4d8 100%);
+        color: #0f172a;
+        font-weight: 600;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
+
+      .back-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(51, 216, 255, 0.4);
+      }
+
+      .content {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 3rem 2rem;
+      }
+
+      .page-title {
+        font-size: 2.5rem;
+        background: linear-gradient(135deg, #33d8ff 0%, #7c3aed 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin-bottom: 1rem;
+      }
+
+      .subtitle {
+        font-size: 1.2rem;
+        color: #cbd5e1;
+        margin-bottom: 2rem;
+      }
+
+      .section {
+        background: linear-gradient(
+          135deg,
+          rgba(30, 41, 59, 0.8) 0%,
+          rgba(51, 65, 85, 0.6) 100%
+        );
+        border: 1px solid rgba(51, 216, 255, 0.2);
+        border-radius: 12px;
+        padding: 2rem;
+        margin-bottom: 2rem;
+      }
+
+      .section h2 {
+        color: #33d8ff;
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+        border-bottom: 2px solid rgba(51, 216, 255, 0.3);
+        padding-bottom: 0.5rem;
+      }
+
+      .section h3 {
+        color: #7c3aed;
+        font-size: 1.3rem;
+        margin-top: 1.5rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .section p {
+        color: #cbd5e1;
+        line-height: 1.8;
+        margin-bottom: 1rem;
+      }
+
+      .section ul {
+        color: #cbd5e1;
+        margin-left: 2rem;
+        line-height: 1.8;
+      }
+
+      .section li {
+        margin-bottom: 0.5rem;
+      }
+
+      footer {
+        background: rgba(15, 23, 42, 0.95);
+        border-top: 1px solid rgba(51, 216, 255, 0.2);
+        padding: 2rem;
+        text-align: center;
+        color: #64748b;
+      }
+
+      @media (max-width: 768px) {
+        .page-title {
+          font-size: 1.8rem;
+        }
+
+        .content {
+          padding: 2rem 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="header-content">
+        <a href="atom-science.html" class="logo">⚛️ AtomHub</a>
+        <a href="atom-science.html" class="back-btn">← Back to Home</a>
+      </div>
+    </header>
+
+    <div class="content">
+      <h1 class="page-title">Quantum Mechanics</h1>
+      <p class="subtitle">
+        Enter the bizarre world where atoms don't follow everyday rules
+      </p>
+
+      <div class="section">
+        <h2>What is Quantum Mechanics?</h2>
+        <p>
+          Quantum mechanics is the branch of physics that describes how matter
+          and energy behave at the smallest scales—at the level of atoms,
+          electrons, and photons (particles of light). At this tiny scale, the
+          rules are very different from the everyday world we experience. Atoms
+          and their particles don't behave like billiard balls or planets; they
+          follow strange and counterintuitive rules.
+        </p>
+        <p>
+          Quantum mechanics was developed in the early 20th century by
+          physicists like Max Planck, Albert Einstein, Werner Heisenberg, and
+          Erwin Schrödinger to explain phenomena that classical physics couldn't
+          explain.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>Key Differences from Classical Physics</h2>
+        <p>The quantum world is very different from the macroscopic world:</p>
+        <ul>
+          <li>
+            <strong>Particles vs. Waves:</strong> Electrons and photons can act
+            as both particles AND waves at the same time
+          </li>
+          <li>
+            <strong>Probability:</strong> We can only predict the probability of
+            finding an electron at a location, not its exact position
+          </li>
+          <li>
+            <strong>Quantization:</strong> Energy, angular momentum, and other
+            properties come in specific packets called "quanta"
+          </li>
+          <li>
+            <strong>Uncertainty:</strong> There are fundamental limits to how
+            precisely we can know certain pairs of properties
+          </li>
+          <li>
+            <strong>Superposition:</strong> Particles can exist in multiple
+            states simultaneously until measured
+          </li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>Wave-Particle Duality</h2>
+
+        <h3>What is It?</h3>
+        <p>
+          One of the strangest concepts in quantum mechanics is that electrons
+          and photons can behave as both particles and waves. This is called
+          wave-particle duality. How they behave depends on how you observe
+          them!
+        </p>
+
+        <h3>The Double-Slit Experiment</h3>
+        <p>
+          The famous double-slit experiment demonstrates this: when electrons
+          pass through two slits, they behave like waves and create an
+          interference pattern. But if you try to detect which slit they go
+          through, they behave like particles and create a different pattern.
+          The act of observation changes the result!
+        </p>
+
+        <h3>Implications</h3>
+        <p>
+          This means that at the quantum level, reality itself seems to depend
+          on observation. This is one of the most mind-bending aspects of
+          quantum mechanics.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>The Uncertainty Principle</h2>
+
+        <h3>Heisenberg's Discovery</h3>
+        <p>
+          Werner Heisenberg discovered that there's a fundamental limit to how
+          accurately we can know certain pairs of properties simultaneously. The
+          most famous is the uncertainty in position and momentum: the more
+          precisely you know where an electron is, the less precisely you can
+          know how fast it's moving, and vice versa.
+        </p>
+
+        <h3>Why Does This Matter?</h3>
+        <p>
+          This isn't just a limitation of our measuring tools—it's a fundamental
+          property of nature. It means that electrons don't have definite
+          positions and velocities simultaneously. This is why we describe
+          electron locations as orbitals (probability clouds) rather than
+          definite orbits.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>Superposition and Entanglement</h2>
+
+        <h3>Superposition</h3>
+        <p>
+          In quantum mechanics, particles can exist in multiple states at the
+          same time, a phenomenon called superposition. An electron can be in
+          multiple places or have multiple energies simultaneously—until it's
+          measured. When measured, it "collapses" into one definite state.
+        </p>
+
+        <h3>Quantum Entanglement</h3>
+        <p>
+          When two or more particles become entangled, they become connected in
+          a way that has no equivalent in classical physics. Measuring one
+          instantly affects the other, no matter how far apart they are.
+          Einstein called this "spooky action at a distance" and was deeply
+          troubled by it.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>Energy Quantization</h2>
+
+        <h3>Quanta and Energy Levels</h3>
+        <p>
+          Planck discovered that energy comes in discrete packets called quanta.
+          Electrons in atoms can only have specific energy levels, not any
+          value. They can jump from one level to another by absorbing or
+          emitting exactly the right amount of energy.
+        </p>
+
+        <h3>The Photon</h3>
+        <p>
+          When an electron jumps to a lower energy level, it emits a photon
+          (particle of light) with energy equal to the difference between the
+          levels. The frequency of the light is related to the energy by E = hf,
+          where h is Planck's constant.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>Schrödinger's Equation</h2>
+
+        <h3>The Fundamental Equation</h3>
+        <p>
+          Erwin Schrödinger developed a mathematical equation that describes how
+          quantum systems evolve over time. This equation is central to quantum
+          mechanics, but it can only predict probabilities, not certainties.
+        </p>
+
+        <h3>What It Tells Us</h3>
+        <p>
+          The equation gives us the wave function (ψ), which contains all the
+          information about a quantum system. The square of the wave function
+          tells us the probability of finding a particle at a particular
+          location or with a particular energy.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>Real-World Quantum Effects</h2>
+        <ul>
+          <li>
+            <strong>Semiconductors:</strong> The basis of all modern electronics
+          </li>
+          <li><strong>Lasers:</strong> Based on quantum emission of photons</li>
+          <li>
+            <strong>Nuclear reactions:</strong> Depend on quantum tunneling
+          </li>
+          <li>
+            <strong>Chemistry:</strong> Explained by quantum orbital theory
+          </li>
+          <li>
+            <strong>Superconductors:</strong> Lose all electrical resistance due
+            to quantum effects
+          </li>
+          <li>
+            <strong>Quantum computers:</strong> Use quantum superposition to
+            process information
+          </li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>Why Quantum Mechanics is Counterintuitive</h2>
+        <p>
+          Quantum mechanics seems strange and counterintuitive because we
+          evolved to navigate a macroscopic world. The quantum rules developed
+          by the universe might be fundamental, but our brains didn't evolve to
+          intuitively understand them. This is why even the greatest physicists
+          find quantum mechanics puzzling—and that's okay! It's a feature of the
+          universe that challenges our understanding.
+        </p>
+      </div>
+    </div>
+
+    <footer>
+      <p>© 2026 AtomHub - Learning about atoms and matter</p>
+    </footer>
+  </body>
+</html>

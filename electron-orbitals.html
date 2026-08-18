@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Electron Orbitals - AtomHub</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #0f172a 0%, #1a1f3a 100%);
+        color: #e2e8f0;
+        min-height: 100vh;
+      }
+
+      header {
+        background: rgba(15, 23, 42, 0.95);
+        border-bottom: 1px solid rgba(51, 216, 255, 0.2);
+        padding: 1rem 2rem;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+
+      .header-content {
+        max-width: 1400px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: #33d8ff;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .logo:hover {
+        color: #4ae8ff;
+      }
+
+      .back-btn {
+        padding: 0.6rem 1.5rem;
+        background: linear-gradient(135deg, #33d8ff 0%, #00b4d8 100%);
+        color: #0f172a;
+        font-weight: 600;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
+
+      .back-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(51, 216, 255, 0.4);
+      }
+
+      .content {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 3rem 2rem;
+      }
+
+      .page-title {
+        font-size: 2.5rem;
+        background: linear-gradient(135deg, #33d8ff 0%, #7c3aed 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin-bottom: 1rem;
+      }
+
+      .subtitle {
+        font-size: 1.2rem;
+        color: #cbd5e1;
+        margin-bottom: 2rem;
+      }
+
+      .section {
+        background: linear-gradient(
+          135deg,
+          rgba(30, 41, 59, 0.8) 0%,
+          rgba(51, 65, 85, 0.6) 100%
+        );
+        border: 1px solid rgba(51, 216, 255, 0.2);
+        border-radius: 12px;
+        padding: 2rem;
+        margin-bottom: 2rem;
+      }
+
+      .section h2 {
+        color: #33d8ff;
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+        border-bottom: 2px solid rgba(51, 216, 255, 0.3);
+        padding-bottom: 0.5rem;
+      }
+
+      .section h3 {
+        color: #7c3aed;
+        font-size: 1.3rem;
+        margin-top: 1.5rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .section p {
+        color: #cbd5e1;
+        line-height: 1.8;
+        margin-bottom: 1rem;
+      }
+
+      .section ul {
+        color: #cbd5e1;
+        margin-left: 2rem;
+        line-height: 1.8;
+      }
+
+      .section li {
+        margin-bottom: 0.5rem;
+      }
+
+      footer {
+        background: rgba(15, 23, 42, 0.95);
+        border-top: 1px solid rgba(51, 216, 255, 0.2);
+        padding: 2rem;
+        text-align: center;
+        color: #64748b;
+      }
+
+      @media (max-width: 768px) {
+        .page-title {
+          font-size: 1.8rem;
+        }
+
+        .content {
+          padding: 2rem 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="header-content">
+        <a href="atom-science.html" class="logo">⚛️ AtomHub</a>
+        <a href="atom-science.html" class="back-btn">← Back to Home</a>
+      </div>
+    </header>
+
+    <div class="content">
+      <h1 class="page-title">Electron Orbitals</h1>
+      <p class="subtitle">Explore the quantum mechanical model of atoms</p>
+
+      <div class="section">
+        <h2>What Are Electron Orbitals?</h2>
+        <p>
+          An electron orbital is the region of space around an atom's nucleus
+          where an electron is likely to be found. Unlike the classical picture
+          of electrons orbiting like planets, quantum mechanics tells us that
+          electrons don't follow definite paths. Instead, they exist in
+          probabilistic clouds called orbitals.
+        </p>
+        <p>
+          Orbitals are three-dimensional regions where there's a high
+          probability of finding an electron. The size and shape of an orbital
+          depend on the energy level of the electron.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>Energy Levels and Shells</h2>
+        <p>
+          Electrons in atoms occupy different energy levels, also called
+          electron shells. Each shell can hold a maximum number of electrons:
+        </p>
+        <ul>
+          <li>
+            <strong>First shell (n=1):</strong> Holds up to 2 electrons (closest
+            to nucleus, lowest energy)
+          </li>
+          <li><strong>Second shell (n=2):</strong> Holds up to 8 electrons</li>
+          <li><strong>Third shell (n=3):</strong> Holds up to 18 electrons</li>
+          <li>
+            <strong>Fourth shell and beyond:</strong> Hold increasingly more
+            electrons
+          </li>
+        </ul>
+        <p>
+          Electrons in lower energy levels (closer to the nucleus) are more
+          tightly bound to the atom. Electrons fill energy levels from lowest to
+          highest, following specific rules called the Aufbau principle.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>Types of Orbitals</h2>
+
+        <h3>s Orbitals</h3>
+        <p>
+          S orbitals are spherical in shape and can hold a maximum of 2
+          electrons. They are the most common and have the lowest energy. The
+          first shell has one s orbital (1s), the second shell has one s orbital
+          (2s), and so on.
+        </p>
+
+        <h3>p Orbitals</h3>
+        <p>
+          P orbitals are dumbbell-shaped and can hold a maximum of 6 electrons
+          (3 orbitals × 2 electrons each). P orbitals start appearing in the
+          second shell (2p) and have higher energy than s orbitals in the same
+          shell.
+        </p>
+
+        <h3>d Orbitals</h3>
+        <p>
+          D orbitals are more complex cloverleaf shapes and can hold a maximum
+          of 10 electrons (5 orbitals × 2 electrons each). D orbitals start
+          appearing in the third shell (3d).
+        </p>
+
+        <h3>f Orbitals</h3>
+        <p>
+          F orbitals are the most complex shapes and can hold a maximum of 14
+          electrons (7 orbitals × 2 electrons each). F orbitals start appearing
+          in the fourth shell (4f).
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>The Quantum Number System</h2>
+        <p>
+          Electron orbitals are described by quantum numbers that specify the
+          energy, shape, and orientation of the orbital:
+        </p>
+        <ul>
+          <li>
+            <strong>Principal quantum number (n):</strong> Determines the energy
+            level and size of the orbital (n = 1, 2, 3, ...)
+          </li>
+          <li>
+            <strong>Angular momentum quantum number (l):</strong> Determines the
+            shape of the orbital (s, p, d, or f)
+          </li>
+          <li>
+            <strong>Magnetic quantum number (ml):</strong> Determines the
+            orientation of the orbital in space
+          </li>
+          <li>
+            <strong>Spin quantum number (ms):</strong> Describes the spin of the
+            electron (up or down)
+          </li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>Electron Configuration</h2>
+        <p>
+          The electron configuration of an atom describes how electrons are
+          distributed among its orbitals. This is crucial for understanding an
+          element's chemical properties. For example:
+        </p>
+        <ul>
+          <li>Hydrogen (H): 1s¹</li>
+          <li>Carbon (C): 1s² 2s² 2p²</li>
+          <li>Oxygen (O): 1s² 2s² 2p⁴</li>
+          <li>Iron (Fe): 1s² 2s² 2p⁶ 3s² 3p⁶ 3d⁶ 4s²</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>Why Orbitals Matter</h2>
+        <p>Understanding electron orbitals is essential for explaining:</p>
+        <ul>
+          <li>How atoms bond with other atoms</li>
+          <li>The chemical properties of elements</li>
+          <li>How atoms emit or absorb light</li>
+          <li>The arrangement of the periodic table</li>
+          <li>Chemical reactions and molecular structure</li>
+        </ul>
+      </div>
+    </div>
+
+    <footer>
+      <p>© 2026 AtomHub - Learning about atoms and matter</p>
+    </footer>
+  </body>
+</html>

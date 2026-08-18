@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chemical Bonding - AtomHub</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #0f172a 0%, #1a1f3a 100%);
+        color: #e2e8f0;
+        min-height: 100vh;
+      }
+
+      header {
+        background: rgba(15, 23, 42, 0.95);
+        border-bottom: 1px solid rgba(51, 216, 255, 0.2);
+        padding: 1rem 2rem;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+
+      .header-content {
+        max-width: 1400px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: #33d8ff;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .logo:hover {
+        color: #4ae8ff;
+      }
+
+      .back-btn {
+        padding: 0.6rem 1.5rem;
+        background: linear-gradient(135deg, #33d8ff 0%, #00b4d8 100%);
+        color: #0f172a;
+        font-weight: 600;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
+
+      .back-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(51, 216, 255, 0.4);
+      }
+
+      .content {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 3rem 2rem;
+      }
+
+      .page-title {
+        font-size: 2.5rem;
+        background: linear-gradient(135deg, #33d8ff 0%, #7c3aed 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin-bottom: 1rem;
+      }
+
+      .subtitle {
+        font-size: 1.2rem;
+        color: #cbd5e1;
+        margin-bottom: 2rem;
+      }
+
+      .section {
+        background: linear-gradient(
+          135deg,
+          rgba(30, 41, 59, 0.8) 0%,
+          rgba(51, 65, 85, 0.6) 100%
+        );
+        border: 1px solid rgba(51, 216, 255, 0.2);
+        border-radius: 12px;
+        padding: 2rem;
+        margin-bottom: 2rem;
+      }
+
+      .section h2 {
+        color: #33d8ff;
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+        border-bottom: 2px solid rgba(51, 216, 255, 0.3);
+        padding-bottom: 0.5rem;
+      }
+
+      .section h3 {
+        color: #7c3aed;
+        font-size: 1.3rem;
+        margin-top: 1.5rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .section p {
+        color: #cbd5e1;
+        line-height: 1.8;
+        margin-bottom: 1rem;
+      }
+
+      .section ul {
+        color: #cbd5e1;
+        margin-left: 2rem;
+        line-height: 1.8;
+      }
+
+      .section li {
+        margin-bottom: 0.5rem;
+      }
+
+      footer {
+        background: rgba(15, 23, 42, 0.95);
+        border-top: 1px solid rgba(51, 216, 255, 0.2);
+        padding: 2rem;
+        text-align: center;
+        color: #64748b;
+      }
+
+      @media (max-width: 768px) {
+        .page-title {
+          font-size: 1.8rem;
+        }
+
+        .content {
+          padding: 2rem 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="header-content">
+        <a href="atom-science.html" class="logo">⚛️ AtomHub</a>
+        <a href="atom-science.html" class="back-btn">← Back to Home</a>
+      </div>
+    </header>
+
+    <div class="content">
+      <h1 class="page-title">Chemical Bonding</h1>
+      <p class="subtitle">How atoms combine to form molecules and compounds</p>
+
+      <div class="section">
+        <h2>What is a Chemical Bond?</h2>
+        <p>
+          A chemical bond is an attraction between atoms or ions that allows
+          them to stick together to form molecules and compounds. Bonds form
+          because atoms are more stable when they have a full outer electron
+          shell. By sharing, transferring, or accumulating electrons, atoms
+          achieve this stable configuration.
+        </p>
+        <p>
+          Chemical bonds are the reason why matter can form complex structures,
+          from simple molecules like water to complex organic compounds that
+          make up living organisms.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>Ionic Bonds</h2>
+
+        <h3>How Ionic Bonds Form</h3>
+        <p>
+          Ionic bonds form between atoms when one atom completely transfers one
+          or more electrons to another atom. The atom that loses electrons
+          becomes a positively charged ion (cation), and the atom that gains
+          electrons becomes a negatively charged ion (anion). The opposite
+          charges attract each other, holding the ions together.
+        </p>
+
+        <h3>Characteristics of Ionic Bonds</h3>
+        <ul>
+          <li>Usually form between metals and nonmetals</li>
+          <li>Result in the formation of ions with opposite charges</li>
+          <li>
+            Are generally very strong and require a lot of energy to break
+          </li>
+          <li>Create compounds that are usually solid at room temperature</li>
+          <li>Many ionic compounds dissolve in water</li>
+        </ul>
+
+        <h3>Examples</h3>
+        <ul>
+          <li>
+            Sodium chloride (NaCl or table salt): formed between Na⁺ and Cl⁻
+          </li>
+          <li>Magnesium oxide (MgO): formed between Mg²⁺ and O²⁻</li>
+          <li>Calcium carbonate (CaCO₃): formed between Ca²⁺ and CO₃²⁻</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>Covalent Bonds</h2>
+
+        <h3>How Covalent Bonds Form</h3>
+        <p>
+          Covalent bonds form when two atoms share electrons with each other.
+          Both atoms benefit from sharing because they can complete their outer
+          electron shell. The shared electrons are attracted to the nuclei of
+          both atoms, holding them together.
+        </p>
+
+        <h3>Single, Double, and Triple Bonds</h3>
+        <ul>
+          <li>
+            <strong>Single bond:</strong> Two atoms share one pair of electrons
+            (e.g., H-H)
+          </li>
+          <li>
+            <strong>Double bond:</strong> Two atoms share two pairs of electrons
+            (e.g., O=O)
+          </li>
+          <li>
+            <strong>Triple bond:</strong> Two atoms share three pairs of
+            electrons (e.g., N≡N)
+          </li>
+        </ul>
+
+        <h3>Characteristics of Covalent Bonds</h3>
+        <ul>
+          <li>Usually form between nonmetals</li>
+          <li>Result in the sharing of electrons between atoms</li>
+          <li>Can be as strong as ionic bonds or weaker</li>
+          <li>Form molecules rather than ionic compounds</li>
+          <li>
+            Many covalent compounds are gases or liquids at room temperature
+          </li>
+        </ul>
+
+        <h3>Examples</h3>
+        <ul>
+          <li>Hydrogen gas (H₂): sharing between two hydrogen atoms</li>
+          <li>Water (H₂O): oxygen shares electrons with two hydrogen atoms</li>
+          <li>
+            Carbon dioxide (CO₂): carbon shares electrons with two oxygen atoms
+          </li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>Polar vs. Nonpolar Covalent Bonds</h2>
+
+        <h3>Nonpolar Covalent Bonds</h3>
+        <p>
+          In a nonpolar covalent bond, electrons are shared equally between
+          atoms. This happens when the atoms have similar electronegativity
+          (attraction for electrons). Example: the H-H bond in hydrogen gas.
+        </p>
+
+        <h3>Polar Covalent Bonds</h3>
+        <p>
+          In a polar covalent bond, electrons are shared unequally between
+          atoms. The atom with higher electronegativity pulls the shared
+          electrons more strongly toward itself. This creates areas of partial
+          positive and negative charge. Example: the O-H bond in water, where
+          oxygen pulls electrons more strongly than hydrogen.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>Metallic Bonds</h2>
+        <p>
+          Metallic bonds form between metal atoms. In metals, valence electrons
+          are delocalized in an "electron sea" that moves freely throughout the
+          structure. This explains why metals conduct electricity and heat well,
+          and why they are usually malleable and ductile.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>Why Chemical Bonding Matters</h2>
+        <ul>
+          <li>Determines how atoms combine to form all matter around us</li>
+          <li>Affects the physical and chemical properties of compounds</li>
+          <li>Is essential to understanding chemical reactions</li>
+          <li>Explains why some substances are solid, liquid, or gas</li>
+          <li>
+            Enables the formation of complex molecules like proteins and DNA
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <footer>
+      <p>© 2026 AtomHub - Learning about atoms and matter</p>
+    </footer>
+  </body>
+</html>

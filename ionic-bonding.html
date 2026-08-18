@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ionic Bonding - GCSE Science</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #0f172a 0%, #1a1f3a 100%);
+        color: #e2e8f0;
+        min-height: 100vh;
+      }
+
+      header {
+        background: rgba(15, 23, 42, 0.95);
+        border-bottom: 1px solid rgba(51, 216, 255, 0.2);
+        padding: 1rem 2rem;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+
+      .header-content {
+        max-width: 1400px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: #33d8ff;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .logo:hover {
+        color: #4ae8ff;
+      }
+
+      .back-btn {
+        padding: 0.6rem 1.5rem;
+        background: linear-gradient(135deg, #33d8ff 0%, #00b4d8 100%);
+        color: #0f172a;
+        font-weight: 600;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
+
+      .back-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(51, 216, 255, 0.4);
+      }
+
+      .content {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 3rem 2rem;
+      }
+
+      .page-title {
+        font-size: 2.5rem;
+        background: linear-gradient(135deg, #33d8ff 0%, #7c3aed 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin-bottom: 1rem;
+      }
+
+      .subtitle {
+        font-size: 1.2rem;
+        color: #cbd5e1;
+        margin-bottom: 2rem;
+      }
+
+      .section {
+        background: linear-gradient(
+          135deg,
+          rgba(30, 41, 59, 0.8) 0%,
+          rgba(51, 65, 85, 0.6) 100%
+        );
+        border: 1px solid rgba(51, 216, 255, 0.2);
+        border-radius: 12px;
+        padding: 2rem;
+        margin-bottom: 2rem;
+      }
+
+      .section h2 {
+        color: #33d8ff;
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+        border-bottom: 2px solid rgba(51, 216, 255, 0.3);
+        padding-bottom: 0.5rem;
+      }
+
+      .section h3 {
+        color: #7c3aed;
+        font-size: 1.3rem;
+        margin-top: 1.5rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .section p {
+        color: #cbd5e1;
+        line-height: 1.8;
+        margin-bottom: 1rem;
+      }
+
+      .section ul {
+        color: #cbd5e1;
+        margin-left: 2rem;
+        line-height: 1.8;
+      }
+
+      .section li {
+        margin-bottom: 0.5rem;
+      }
+
+      .code-box {
+        background: rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(51, 216, 255, 0.3);
+        border-radius: 6px;
+        padding: 1rem;
+        margin: 1rem 0;
+        font-family: "Courier New", monospace;
+        color: #4ae8ff;
+        overflow-x: auto;
+      }
+
+      footer {
+        background: rgba(15, 23, 42, 0.95);
+        border-top: 1px solid rgba(51, 216, 255, 0.2);
+        padding: 2rem;
+        text-align: center;
+        color: #64748b;
+      }
+
+      @media (max-width: 768px) {
+        .page-title {
+          font-size: 1.8rem;
+        }
+
+        .content {
+          padding: 2rem 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="header-content">
+        <a href="atom-science.html" class="logo">⚛️ AtomHub</a>
+        <a href="atom-science.html" class="back-btn">← Back to Home</a>
+      </div>
+    </header>
+
+    <div class="content">
+      <h1 class="page-title">Ionic Bonding</h1>
+      <p class="subtitle">Transfer of electrons between atoms to form ions</p>
+
+      <div class="section">
+        <h2>What is Ionic Bonding?</h2>
+        <p>
+          Ionic bonding is the electrostatic attraction between positively
+          charged ions (cations) and negatively charged ions (anions). It occurs
+          when one atom transfers electrons to another atom, resulting in the
+          formation of charged particles that are held together by opposite
+          electrical charges.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>How Ionic Bonds Form</h2>
+
+        <h3>Step 1: Electron Transfer</h3>
+        <p>
+          A metal atom (which has few valence electrons) loses electrons to
+          become a positively charged cation. A nonmetal atom (which has many
+          valence electrons) gains these electrons to become a negatively
+          charged anion.
+        </p>
+
+        <h3>Example: Sodium Chloride (NaCl)</h3>
+        <div class="code-box">
+          Sodium (Na): 2,8,1 → loses 1 electron → Na⁺ (2,8)<br />
+          Chlorine (Cl): 2,8,7 → gains 1 electron → Cl⁻ (2,8,8)<br />
+          <br />
+          Result: Na⁺ and Cl⁻ attract electrostatically
+        </div>
+
+        <h3>Step 2: Electrostatic Attraction</h3>
+        <p>
+          The oppositely charged ions attract each other through electrostatic
+          forces. Many ions arrange in a regular pattern called an ionic lattice
+          structure.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>Cations and Anions</h2>
+
+        <h3>Cations (Positive Ions)</h3>
+        <ul>
+          <li>Formed by atoms losing electrons</li>
+          <li>
+            Typically metals (alkali metals lose 1, alkaline earth metals lose
+            2)
+          </li>
+          <li>Examples: Na⁺, Mg²⁺, Al³⁺</li>
+        </ul>
+
+        <h3>Anions (Negative Ions)</h3>
+        <ul>
+          <li>Formed by atoms gaining electrons</li>
+          <li>Typically nonmetals</li>
+          <li>Examples: Cl⁻, O²⁻, N³⁻</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>Properties of Ionic Compounds</h2>
+
+        <h3>High Melting and Boiling Points</h3>
+        <p>
+          Strong electrostatic attractions between ions require large amounts of
+          energy to break, resulting in high melting and boiling points.
+        </p>
+
+        <h3>Solubility</h3>
+        <p>
+          Most ionic compounds are soluble in water. Water molecules can
+          surround and separate the ions, dissolving the compound.
+        </p>
+
+        <h3>Electrical Conductivity</h3>
+        <ul>
+          <li>
+            Solid ionic compounds: Do not conduct electricity (ions fixed in
+            place)
+          </li>
+          <li>Molten ionic compounds: Conduct electricity (ions are mobile)</li>
+          <li>
+            Aqueous solutions: Conduct electricity (ions are free to move)
+          </li>
+        </ul>
+
+        <h3>Brittleness</h3>
+        <p>
+          When ionic compounds are struck, layers can shift. Like charges repel,
+          causing the compound to shatter.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>Ionic Lattice Structure</h2>
+        <p>
+          Ionic compounds form regular 3D arrangements called ionic lattices.
+          Each ion is surrounded by oppositely charged ions, and the pattern
+          repeats throughout the crystal.
+        </p>
+
+        <h3>Examples:</h3>
+        <ul>
+          <li>
+            <strong>NaCl structure:</strong> Each Na⁺ surrounded by 6 Cl⁻, each
+            Cl⁻ surrounded by 6 Na⁺
+          </li>
+          <li>
+            <strong>CaF₂ structure:</strong> Different arrangement due to charge
+            differences
+          </li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>Common Ionic Compounds</h2>
+        <div class="code-box">
+          Sodium chloride (NaCl) - Table salt<br />
+          Calcium chloride (CaCl₂) - Drying agent<br />
+          Magnesium oxide (MgO) - Refractory material<br />
+          Potassium bromide (KBr) - Photography<br />
+          Aluminum oxide (Al₂O₃) - Corundum, gemstones<br />
+          Sodium hydroxide (NaOH) - Caustic soda
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Key Points to Remember</h2>
+        <ul>
+          <li>
+            Ionic bonding involves electron transfer from metal to nonmetal
+          </li>
+          <li>Cations are positively charged (lost electrons)</li>
+          <li>Anions are negatively charged (gained electrons)</li>
+          <li>Electrostatic attraction holds ions together</li>
+          <li>Ionic compounds have high melting points</li>
+          <li>They conduct electricity when molten or dissolved</li>
+          <li>Ions arrange in regular lattice structures</li>
+        </ul>
+      </div>
+    </div>
+
+    <footer>
+      <p>© 2026 AtomHub - GCSE Science Study Guide</p>
+    </footer>
+  </body>
+</html>

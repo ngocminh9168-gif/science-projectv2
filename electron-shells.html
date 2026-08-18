@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Electron Shells - GCSE Science</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #0f172a 0%, #1a1f3a 100%);
+        color: #e2e8f0;
+        min-height: 100vh;
+      }
+
+      header {
+        background: rgba(15, 23, 42, 0.95);
+        border-bottom: 1px solid rgba(51, 216, 255, 0.2);
+        padding: 1rem 2rem;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+
+      .header-content {
+        max-width: 1400px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: #33d8ff;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .logo:hover {
+        color: #4ae8ff;
+      }
+
+      .back-btn {
+        padding: 0.6rem 1.5rem;
+        background: linear-gradient(135deg, #33d8ff 0%, #00b4d8 100%);
+        color: #0f172a;
+        font-weight: 600;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
+
+      .back-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(51, 216, 255, 0.4);
+      }
+
+      .content {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 3rem 2rem;
+      }
+
+      .page-title {
+        font-size: 2.5rem;
+        background: linear-gradient(135deg, #33d8ff 0%, #7c3aed 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin-bottom: 1rem;
+      }
+
+      .subtitle {
+        font-size: 1.2rem;
+        color: #cbd5e1;
+        margin-bottom: 2rem;
+      }
+
+      .section {
+        background: linear-gradient(
+          135deg,
+          rgba(30, 41, 59, 0.8) 0%,
+          rgba(51, 65, 85, 0.6) 100%
+        );
+        border: 1px solid rgba(51, 216, 255, 0.2);
+        border-radius: 12px;
+        padding: 2rem;
+        margin-bottom: 2rem;
+      }
+
+      .section h2 {
+        color: #33d8ff;
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+        border-bottom: 2px solid rgba(51, 216, 255, 0.3);
+        padding-bottom: 0.5rem;
+      }
+
+      .section h3 {
+        color: #7c3aed;
+        font-size: 1.3rem;
+        margin-top: 1.5rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .section p {
+        color: #cbd5e1;
+        line-height: 1.8;
+        margin-bottom: 1rem;
+      }
+
+      .section ul {
+        color: #cbd5e1;
+        margin-left: 2rem;
+        line-height: 1.8;
+      }
+
+      .section li {
+        margin-bottom: 0.5rem;
+      }
+
+      .code-box {
+        background: rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(51, 216, 255, 0.3);
+        border-radius: 6px;
+        padding: 1rem;
+        margin: 1rem 0;
+        font-family: "Courier New", monospace;
+        color: #4ae8ff;
+        overflow-x: auto;
+      }
+
+      footer {
+        background: rgba(15, 23, 42, 0.95);
+        border-top: 1px solid rgba(51, 216, 255, 0.2);
+        padding: 2rem;
+        text-align: center;
+        color: #64748b;
+      }
+
+      @media (max-width: 768px) {
+        .page-title {
+          font-size: 1.8rem;
+        }
+
+        .content {
+          padding: 2rem 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="header-content">
+        <a href="atom-science.html" class="logo">⚛️ AtomHub</a>
+        <a href="atom-science.html" class="back-btn">← Back to Home</a>
+      </div>
+    </header>
+
+    <div class="content">
+      <h1 class="page-title">Electron Shells</h1>
+      <p class="subtitle">How electrons are arranged around the nucleus</p>
+
+      <div class="section">
+        <h2>What are Electron Shells?</h2>
+        <p>
+          Electron shells (also called energy levels or orbitals) are regions
+          around the nucleus where electrons are found. Electrons are arranged
+          in these shells, with each shell able to hold a maximum number of
+          electrons. The arrangement of electrons in shells determines the
+          chemical properties of an element.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>Shell Capacities (Simple Model)</h2>
+        <p>In the simple model used for GCSE Science:</p>
+        <div class="code-box">
+          First shell (Shell 1): Maximum 2 electrons<br />
+          Second shell (Shell 2): Maximum 8 electrons<br />
+          Third shell (Shell 3): Maximum 8 electrons
+        </div>
+        <p>
+          Electrons fill the first shell before moving to the second, and the
+          second before the third (Aufbau principle).
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>Electron Configuration Notation</h2>
+        <p>
+          We write electron configurations as numbers representing electrons in
+          each shell, from innermost to outermost.
+        </p>
+
+        <h3>Examples:</h3>
+        <div class="code-box">
+          Hydrogen (H): 1 electron → 1<br />
+          Carbon (C): 6 electrons → 2,4<br />
+          Oxygen (O): 8 electrons → 2,6<br />
+          Sodium (Na): 11 electrons → 2,8,1<br />
+          Chlorine (Cl): 17 electrons → 2,8,7<br />
+          Argon (Ar): 18 electrons → 2,8,8
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Valence Electrons</h2>
+        <p>
+          The valence electrons are the electrons in the outermost shell. These
+          electrons determine how an atom bonds with other atoms and its
+          chemical reactivity.
+        </p>
+
+        <h3>Examples of Valence Electrons:</h3>
+        <ul>
+          <li><strong>Carbon (2,4):</strong> 4 valence electrons</li>
+          <li><strong>Oxygen (2,6):</strong> 6 valence electrons</li>
+          <li><strong>Sodium (2,8,1):</strong> 1 valence electron</li>
+          <li><strong>Chlorine (2,8,7):</strong> 7 valence electrons</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>Electron Shells and Reactivity</h2>
+        <p>
+          Atoms tend to react to achieve a full outer shell (stable
+          configuration). Noble gases like argon (2,8,8) have full outer shells
+          and are very unreactive.
+        </p>
+
+        <h3>Electron Shell Stability:</h3>
+        <ul>
+          <li>
+            <strong>Full outer shell:</strong> Stable, unreactive (noble gases)
+          </li>
+          <li>
+            <strong>1-3 electrons in outer shell:</strong> Likely to lose
+            electrons (metals)
+          </li>
+          <li>
+            <strong>5-7 electrons in outer shell:</strong> Likely to gain
+            electrons (nonmetals)
+          </li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>Working Out Electron Configuration</h2>
+
+        <h3>Step 1: Find the Atomic Number</h3>
+        <p>The atomic number tells you how many electrons the atom has.</p>
+
+        <h3>Step 2: Fill Shells in Order</h3>
+        <p>
+          Fill the first shell with up to 2 electrons, then the second with up
+          to 8, then the third with up to 8.
+        </p>
+
+        <h3>Example: Magnesium (Atomic Number 12)</h3>
+        <div class="code-box">
+          First shell: 2 electrons (filled)<br />
+          Second shell: 8 electrons (filled)<br />
+          Third shell: 2 electrons (remaining)<br />
+          Configuration: 2,8,2
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Why This Matters for Chemistry</h2>
+        <ul>
+          <li>Electron configuration determines bonding behavior</li>
+          <li>Explains periodic table patterns and element properties</li>
+          <li>Determines ion formation and charges</li>
+          <li>Affects electronegativity and reactivity</li>
+          <li>Explains why certain elements react together</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>Quick Reference</h2>
+        <ul>
+          <li>Hydrogen: 1</li>
+          <li>Helium: 2</li>
+          <li>Lithium: 2,1</li>
+          <li>Beryllium: 2,2</li>
+          <li>Boron: 2,3</li>
+          <li>Nitrogen: 2,5</li>
+          <li>Fluorine: 2,7</li>
+          <li>Neon: 2,8</li>
+          <li>Aluminium: 2,8,3</li>
+          <li>Sulfur: 2,8,6</li>
+          <li>Potassium: 2,8,8,1</li>
+          <li>Calcium: 2,8,8,2</li>
+        </ul>
+      </div>
+    </div>
+
+    <footer>
+      <p>© 2026 AtomHub - GCSE Science Study Guide</p>
+    </footer>
+
+    <script src="electron-shells.js"></script>
+  </body>
+</html>
